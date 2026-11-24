@@ -1,31 +1,77 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
 <meta charset="utf-8">
-<title>evevtayler - Pabrik Konveksi Seragam Kerja Kantor, Kemeja PDH &amp; Polo Bordir Komputer Jakarta</title>
+<title>evevtayler | Pabrik Konveksi Seragam Kerja Kantor, Kemeja PDH, Wearpack &amp; Polo Bordir Komputer Jakarta</title>
+<meta name="description" content="evevtayler Konveksi melayani pembuatan seragam kerja kantor, kemeja PDH/PDL American Drill, polo shirt bordir komputer, wearpack safety pabrik, dan jaket komunitas di Jakarta Timur dengan harga pabrik, QC ketat & pengiriman seluruh Indonesia.">
+
+<!-- Anti-FOUC Theme Initializer (Berjalan sebelum CSS dirender) -->
+<script>
+(function () {
+    var root = document.documentElement;
+    root.classList.add("theme-preload");
+    var theme = null;
+    try { theme = localStorage.getItem("evevdigital_theme_preference"); } catch (e) {}
+    if (theme !== "dark" && theme !== "light") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    root.setAttribute("data-theme", theme);
+    root.style.colorScheme = theme;
+})();
+</script>
+
 <!-- Stylesheets -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
-<!-- Responsive File -->
 <link href="assets/css/responsive.css" rel="stylesheet">
-<!-- Color File -->
 <link href="assets/css/color.css" rel="stylesheet">
+<link href="assets/css/theme-toggle.css" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/theme-toggle.css">
+<style>
+    .feature-block_image img,
+    .introduction-block_image img,
+    .service-block-three_image img,
+    .gallery-block_image img,
+    .testimonial-block-two_image img,
+    .benefits-section_image img,
+    .news-block-one_image img {
+        object-fit: cover;
+    }
+    .feature-block_image img { width: 100%; height: 240px; }
+    .service-block-three_image img { width: 140px; height: 140px; border-radius: 50%; }
+    .gallery-block_image img { width: 100%; height: 290px; display: block; }
+    .news-block-one_image img { width: 100%; height: 240px; display: block; }
+    .testimonial-block-two_image img { width: 84px; height: 84px; border-radius: 50%; }
+    .benefits-section_image img { width: 100%; height: 420px; border-radius: 10px; }
+
+    .evev-header-actions {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 14px;
+    }
+    .service-block-three_title {
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px;
+    }
+    .service-block-three_text {
+        font-size: 14.5px !important;
+        line-height: 1.65 !important;
+        margin-bottom: 14px;
+    }
+</style>
 </head>
 
 <body>
@@ -42,21 +88,20 @@
                     <div class="left-column">
                         <div class="header-top-two_contact-info">
                             <div class="header-top-two_contact-info-icon"><i class="fal fa-envelope-open-text"></i></div>
-                            <div class="header-top-two_mail-title">Send Email</div>
-                            <div class="header-top-two-mail"><a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a></div>
+                            <div class="header-top-two_mail-title">Email Purchasing &amp; PO</div>
+                            <div class="header-top-two-mail"><a href="mailto:kontak@evevdigital.com" data-config="email">kontak@evevdigital.com</a></div>
                         </div>
                     </div>
                     <div class="middle-column">
-                        <!--Logo-->
                         <div class="logo-box">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler Konveksi Seragam Kerja"></a></div>
                         </div>
                     </div>
                     <div class="right-column">
                         <div class="header-top-two_contact-info">
                             <div class="header-top-two_contact-info-icon"><i class="flaticon-phone-call"></i></div>
-                            <div class="header-top-two_phone-title">Call Anytime</div>
-                            <div class="header-top-two-phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                            <div class="header-top-two_phone-title">Hotline Konveksi &amp; Quotation</div>
+                            <div class="header-top-two-phone"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                         </div>
                     </div>
                 </div>
@@ -67,104 +112,91 @@
         <div class="header-upper">
             <div class="auto-container">
                 <div class="inner-container">
-                    <!--Logo-->
                     <div class="logo-box d-none">
-                        <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler"></a></div>
                     </div>
-                    <!--Nav Box-->
-                    <div class="nav-outer">
-                        <!--Mobile Navigation Toggler-->
-                        <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt=""></div>
+                    <div class="nav-outer d-flex align-items-center justify-content-between">
+                        <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt="Buka Menu Navigasi"></div>
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation">
-                                    <li class="dropdown"><a href="index.html">Home</a>
+                                    <li class="dropdown current"><a href="index.html">Pilih Desain</a>
                                         <ul>
-                                            <li><a href="index.html">Home Page 01</a></li>
-                                            <li><a href="index.html">Home Page 02</a></li>
+                                            <li><a href="template-1.html">Template 1: Vermak Kilat 15–30 Menit</a></li>
+                                            <li><a href="template-2.html">Template 2: Jas &amp; Kebaya Bespoke</a></li>
+                                            <li class="current"><a href="template-3.html">Template 3: Konveksi Seragam Kerja</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#tentang">About</a></li>                                       
-                                    <li class="dropdown"><a href="#">Layanan Jahit</a>
+                                    <li><a href="#tentang">Tentang Pabrik</a></li>
+                                    <li class="dropdown"><a href="#layanan">Produk Konveksi</a>
                                         <ul>
-                                            <li><a href="#layanan">Our Layanan Jahit</a>
-                                            </li>
-                                            <li><a href="#layanan">Outerwear</a></li>
-                                            <li><a href="#layanan">Kemeja Kerja Kantor &amp; PDH (Rp 85.000/pcs)</a></li>
-                                            <li><a href="#layanan">Wearpack Safety Pabrik (Rp 125.000/pcs)</a></li>
-                                            <li><a href="#layanan">Jaket Bomber &amp; Windbreaker (Rp 135.000/pcs)</a></li>
-                                            <li><a href="#layanan">Polo Shirt Bordir Komputer (Rp 65.000/pcs)</a></li>
-                                            <li><a href="#layanan">Accessories</a></li>
+                                            <li><a href="#layanan">Katalog Produksi Seragam</a></li>
+                                            <li><a href="#daftar-harga">Daftar Harga Grosir</a></li>
+                                            <li><a href="#layanan">Kemeja Kerja &amp; PDH (Rp 85.000/pcs)</a></li>
+                                            <li><a href="#layanan">Polo Shirt Bordir (Rp 65.000/pcs)</a></li>
+                                            <li><a href="#layanan">Wearpack Safety (Rp 125.000/pcs)</a></li>
+                                            <li><a href="#layanan">Jaket Bomber (Rp 135.000/pcs)</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">Pages</a>
-                                        <ul>
-                                            <li><a href="#tentang">evevtayler</a></li>
-                                            <li><a href="#galeri">Portofolio Karya</a></li>
-                                            <li><a href="#tentang">FAQ</a></li>
-                                            <li><a href="#">404 Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="#blog">Blog </a></li>
-                                            <li><a href="#blog">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#kontak">Contact</a></li>
+                                    <li><a href="#galeri">Portofolio Klien</a></li>
+                                    <li><a href="#testimoni">Testimoni</a></li>
+                                    <li><a href="#blog">Panduan Bahan</a></li>
+                                    <li><a href="#kontak">Lokasi &amp; Kontak</a></li>
                                 </ul>
                             </div>
                         </nav>
+
+                        <div class="evev-header-actions">
+                            <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti Tema Gelap atau Terang" aria-pressed="false" title="Ganti ke Mode Gelap">
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Header Upper-->
+        <!-- End Header Upper -->
 
-        <!-- Sticky Header  -->
+        <!-- Sticky Header -->
         <div class="sticky-header">
             <div class="header-upper">
                 <div class="auto-container">
                     <div class="inner-container">
-                        <!--Logo-->
                         <div class="logo-box">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler"></a></div>
                         </div>
                         <div class="right-column">
-                            <!--Nav Box-->
-                            <div class="nav-outer">
-                                <!--Mobile Navigation Toggler-->
-                                <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png" alt=""></div>
-    
-                                <!-- Main Menu -->
-                                <nav class="main-menu navbar-expand-md navbar-light">
-                                </nav>
+                            <div class="nav-outer d-flex align-items-center">
+                                <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png" alt="Menu Navigasi"></div>
+                                <nav class="main-menu navbar-expand-md navbar-light"></nav>
+                                <div class="evev-header-actions">
+                                    <button type="button" class="theme-toggle-btn" aria-label="Ganti Tema Gelap atau Terang" aria-pressed="false" title="Ganti Tema">
+                                        <i class="fas fa-moon" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div><!-- End Sticky Menu -->
 
-        <!-- Mobile Menu  -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="icon fal fa-times"></i></div>
-            
+
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="" title=""></a></div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-				<!--Social Links-->
-				<div class="social-links">
-					<ul class="clearfix">
-						<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-						<li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-						<li><a href="#"><span class="fab fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fab fa-youtube"></span></a></li>
-					</ul>
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler" title="evevtayler"></a></div>
+                <div class="menu-outer"></div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-wa-umum=""><span class="fab fa-whatsapp"></span></a></li>
+                    </ul>
                 </div>
             </nav>
         </div><!-- End Mobile Menu -->
@@ -176,17 +208,17 @@
     </header>
     <!-- End Main Header -->
 
-    <!--Search Popup-->
+    <!-- Search Popup -->
     <div id="search-popup" class="search-popup">
         <div class="close-search theme-btn"><i class="fal fa-times"></i></div>
         <div class="popup-inner">
             <div class="overlay-layer"></div>
             <div class="search-form">
-                <form action="#" onsubmit="event.preventDefault();">
+                <form action="#">
                     <div class="form-group">
                         <fieldset>
-                            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
-                            <input type="submit" value="Search Now!" class="theme-btn">
+                            <input type="search" class="form-control" name="search-input" value="" placeholder="Cari: kemeja PDH, polo bordir, wearpack, jaket bomber..." required>
+                            <input type="submit" value="Minta Penawaran WA" class="theme-btn">
                         </fieldset>
                     </div>
                 </form>
@@ -194,35 +226,35 @@
         </div>
     </div>
 
-    <!-- Bnner Section -->
+    <!-- Banner Section -->
     <section class="banner-section style-two">
         <div class="swiper-container banner-slider">
             <div class="swiper-wrapper">
-                <!-- Slide Item -->
+                <!-- Slide 1 -->
                 <div class="swiper-slide" style="background-image: url(assets/images/evevtayler/hero_konveksi_seragam.webp);">
                     <div class="content-outer">
                         <div class="content-box text-center justify-content-center">
                             <div class="inner">
-                                <h4>Welcome to evevtayler</h4>
-                                <h1>Create your <br> own Personal Style</h1>
+                                <h4>Pabrik Konveksi Tangan Pertama — Minimal Order 12 Pcs</h4>
+                                <h1>Konveksi Seragam Kerja <br> &amp; Bordir Komputer Presisi</h1>
                                 <div class="link-box">
-                                    <a href="#layanan" class="theme-btn btn-style-one"><span>discover more</span></a>
+                                    <a href="#daftar-harga" class="theme-btn btn-style-one"><span>Lihat Daftar Harga Grosir</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Slide Item -->
+                <!-- Slide 2 -->
                 <div class="swiper-slide" style="background-image: url(assets/images/evevtayler/portfolio_seragam_komunitas.webp);">
                     <div class="content-outer">
                         <div class="content-box text-center justify-content-center">
                             <div class="inner">
-                                <h4>Welcome to evevtayler</h4>
-                                <h1>our Personal <br>  Quality evevtayler</h1>
+                                <h4>Gratis Mockup Desain, Sampel Bahan &amp; Garansi Tepat Waktu</h4>
+                                <h1>Kemeja PDH, Polo Shirt, <br> Wearpack &amp; Jaket Komunitas</h1>
                                 <div class="link-box">
-                                    <a href="#layanan" class="theme-btn btn-style-one"><span>discover more</span></a>
+                                    <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" class="theme-btn btn-style-one" data-wa-umum="Halo Tim Konveksi evevtayler, saya ingin meminta penawaran harga seragam kerja/komunitas."><span>Minta Quotation via WA</span></a>
                                 </div>
-                            </div>       
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,170 +262,317 @@
         </div>
         <div class="banner-slider-nav">
             <div class="banner-slider-control banner-slider-button-prev"><span><i class="fas fa-arrow-right"></i></span></div>
-            <div class="banner-slider-control banner-slider-button-next"><span><i class="fas fa-arrow-right"></i></span> </div>
+            <div class="banner-slider-control banner-slider-button-next"><span><i class="fas fa-arrow-right"></i></span></div>
         </div>
     </section>
-    <!-- End Bnner Section -->
+    <!-- End Banner Section -->
 
-    <!-- Features section -->
+    <!-- Features Section -->
     <section class="features-section">
         <div class="auto-container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_mesin_jahit.webp" alt=""></div>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_mesin_jahit.webp" alt="Mesin Bordir Komputer Tajam dan Presisi" loading="lazy"></div>
                         <h4 class="feature-block_title">Bordir Komputer Tajam</h4>
                         <div class="feature-block_hover-content">
                             <h4 class="feature-block_title">Bordir Komputer Tajam</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <div class="feature-block_text">Menggunakan mesin bordir komputer 12 kepala agar logo perusahaan dan instansi tampil rapat, detail, dan tidak mudah brudul.</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/portfolio_seragam_komunitas.webp" alt=""></div>
-                        <h4 class="feature-block_title">Bahan American Drill Asli</h4>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/portfolio_seragam_komunitas.webp" alt="Bahan American Drill Nagata Drill dan Lacoste CVC Asli" loading="lazy"></div>
+                        <h4 class="feature-block_title">Bahan Drill &amp; Lacoste Asli</h4>
                         <div class="feature-block_hover-content">
-                            <h4 class="feature-block_title">Bahan American Drill Asli</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <h4 class="feature-block_title">Bahan Drill &amp; Lacoste Asli</h4>
+                            <div class="feature-block_text">Pilihan lengkap American Drill, Nagata Drill, Ripstop, Lacoste CVC, dan Taslan Waterproof yang adem, kuat, dan tidak mudah pudar.</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/service_konveksi_seragam.webp" alt=""></div>
-                        <h4 class="feature-block_title">Kevin in Media</h4>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/service_konveksi_seragam.webp" alt="Kapasitas Produksi Massal Tepat Waktu dan Invoice Resmi" loading="lazy"></div>
+                        <h4 class="feature-block_title">Tepat Waktu &amp; QC Ketat</h4>
                         <div class="feature-block_hover-content">
-                            <h4 class="feature-block_title">Kevin in Media</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <h4 class="feature-block_title">Tepat Waktu &amp; QC Ketat</h4>
+                            <div class="feature-block_text">Kapasitas hingga 2.000 pcs/bulan dengan 3 tahap quality control, garansi jahitan, invoice resmi, dan pengiriman ke seluruh Indonesia.</div>
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
     </section>
 
-    <!-- Introduction -->
+    <!-- Introduction / Tentang Pabrik Konveksi -->
     <section id="tentang" class="introduction-section">
         <div class="auto-container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="introduction-block_image">
                         <div class="img_hover_3">
-                            <img src="assets/images/evevtayler/hero_konveksi_seragam.webp" alt="">
+                            <img src="assets/images/evevtayler/hero_konveksi_seragam.webp" alt="Lini Produksi Konveksi Seragam evevtayler Jakarta Timur" loading="lazy" style="width:100%; height:460px; object-fit:cover;">
                         </div>
                         <div class="introduction-block_content" data-parallax='{"y": 30}'>
-                            <div class="introduction-block_text-two">Trusted and Professional <br> evevtayler in Town</div>
-                            <a class="introduction-block_link-btn-two" href="#tentang">Get Started</a>
+                            <div class="introduction-block_text-two">Vendor Konveksi Seragam <br> Kantor &amp; Instansi Terpercaya</div>
+                            <a class="introduction-block_link-btn-two" href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo Tim Konveksi evevtayler, saya ingin konsultasi desain & penawaran harga produksi seragam.">Minta Quotation WA</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="introduction-block">
-                        <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                        <div class="sub-title">Our Introduction </div>
-                        <div class="sec-title">Our evevtayler Ready to <br> nStich your Clothes</div>
-                        <div class="introduction-block_text">evevtayler berpengalaman belasan tahun dalam pembuatan dan permak pakaian pria maupun wanita dengan standar jahitan halus dan bergaransi.unc dictum.</div>
+                        <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Dekorasi judul" loading="lazy"></div>
+                        <div class="sub-title">Tentang evevtayler Konveksi</div>
+                        <div class="sec-title">Produksi Seragam Rapi, <br> Harga Pabrik &amp; Tepat Deadline</div>
+                        <div class="introduction-block_text">Seragam kerja mencerminkan citra profesional perusahaan Anda. <strong>evevtayler Konveksi</strong> melayani pembuatan kemeja PDH/PDL, polo shirt bordir, wearpack safety, hingga jaket komunitas langsung dari workshop sendiri di Jakarta Timur—tanpa perantara, spesifikasi bahan transparan, dan selesai tepat jadwal.</div>
                         <ul class="introduction-block_list">
-                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt=""></i>Suspe ndisse suscipit sagittis leo.</li>
-                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt=""></i>Garansi pas di badan &amp; gratis vermak ulang bila kurang pas.</li>
+                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt="Centang" loading="lazy"></i>Gratis konsultasi bahan, mockup desain digital, serta pilihan size S hingga 5XL.</li>
+                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt="Centang" loading="lazy"></i>Garansi revisi &amp; penggantian jika ada cacat produksi atau bordir tidak sesuai approval.</li>
                         </ul>
-                        <div class="row">
+                        <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="introduction-block_contact-info">
-                                    <div class="introduction-block_phone-title">Call Anytime</div>
-                                    <div class="introduction-block-phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                                    <div class="introduction-block_phone-title">Admin PO &amp; Quotation</div>
+                                    <div class="introduction-block-phone"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="introduction-block_link-btn"><a href="#tentang" class="theme-btn btn-style-one">discover more</a></div>
+                                <div class="introduction-block_link-btn"><a href="#daftar-harga" class="theme-btn btn-style-one">Lihat Harga Pabrik</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
     </section>
 
-    <!-- Layanan Jahit Offer -->
+    <!-- 4 Produk Konveksi Unggulan -->
     <section id="layanan" class="service-offer-section">
         <div class="auto-container">
-            <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Checkout our services</div>
-                <div class="sec-title">Layanan Jahit We Offer</div>
+            <div class="text-center mb-5">
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Produk Konveksi Unggulan" loading="lazy"></div>
+                <div class="sub-title">Produk Konveksi Unggulan</div>
+                <div class="sec-title">Seragam Kantor, Lapangan &amp; Komunitas</div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_konveksi_seragam.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Kemeja Kerja Kantor &amp; PDH (Rp 85.000/pcs)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_konveksi_seragam.webp" alt="Konveksi Kemeja Kerja Kantor dan PDH American Drill" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Kemeja Kerja Kantor &amp; PDH/PDL</h4>
+                        <div class="service-block-three_text">Bahan American Drill / Nagata Drill adem dengan pola nyaman untuk aktivitas indoor maupun lapangan. Sudah termasuk bordir logo perusahaan di dada &amp; punggung.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 85.000/pcs</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Kemeja%20Kerja%20Kantor%20%26%20PDH/PDL%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%2085.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%207%20-%2012%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Kemeja Kerja Kantor & PDH/PDL" data-wa-harga="Rp 85.000/pcs" data-wa-estimasi="7 - 12 Hari"><i class="fab fa-whatsapp"></i> Minta Penawaran WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_seragam_komunitas.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Polo Shirt Bordir Komputer (Rp 65.000/pcs)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_seragam_komunitas.webp" alt="Konveksi Polo Shirt Bordir Komputer Lacoste CVC" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Polo Shirt Bordir Komputer</h4>
+                        <div class="service-block-three_text">Kaos kerah bahan Lacoste CVC 20s/24s lembut dan tidak menyusut. Favorit untuk seragam kasual hari Jumat, gathering perusahaan, dan tim sales lapangan.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 65.000/pcs</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Polo%20Shirt%20Bordir%20Komputer%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%2065.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%205%20-%2010%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Polo Shirt Bordir Komputer" data-wa-harga="Rp 65.000/pcs" data-wa-estimasi="5 - 10 Hari"><i class="fab fa-whatsapp"></i> Minta Penawaran WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_konveksi_seragam.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Wearpack Safety Pabrik (Rp 125.000/pcs)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/hero_konveksi_seragam.webp" alt="Konveksi Wearpack Safety Pabrik dan Proyek" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Wearpack Safety Pabrik &amp; Proyek</h4>
+                        <div class="service-block-three_text">Tersedia model setelan maupun coverall dengan skotlet reflektor menyala, resleting YKK heavy-duty, serta penguatan jahitan bartack di titik tarikan.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 125.000/pcs</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Wearpack%20Safety%20Pabrik%20%26%20Proyek%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%20125.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%2010%20-%2014%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Wearpack Safety Pabrik & Proyek" data-wa-harga="Rp 125.000/pcs" data-wa-estimasi="10 - 14 Hari"><i class="fab fa-whatsapp"></i> Minta Penawaran WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_seragam_komunitas.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Jaket Bomber &amp; Windbreaker (Rp 135.000/pcs)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt="Konveksi Jaket Bomber dan Windbreaker Komunitas" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Jaket Bomber &amp; Windbreaker</h4>
+                        <div class="service-block-three_text">Bahan Taslan Waterproof tahan angin dengan furing nyaman dan rib elastis rapi. Cocok untuk jaket angkatan, tim operasional lapangan, dan komunitas otomotif.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 135.000/pcs</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Jaket%20Bomber%20%26%20Windbreaker%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%20135.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%2010%20-%2014%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Jaket Bomber & Windbreaker" data-wa-harga="Rp 135.000/pcs" data-wa-estimasi="10 - 14 Hari"><i class="fab fa-whatsapp"></i> Minta Penawaran WA</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video -->
-    <section class="video-section">
-        <div class="video-section_bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/evevtayler/hero_konveksi_seragam.webp)"></div>
+    <!-- Daftar Harga Grosir Konveksi 6 Paket Simetris -->
+    <section id="daftar-harga" class="evev-tarif-section">
         <div class="auto-container">
-            <div class="row">
-                <div class="video-btn"><a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="overlay-link play-now ripple" data-fancybox="gallery" data-caption=""><i class="fas fa-play"></i></a></div>
-                <h4 class="video-block_title">You Can Depend on Our <br> evevtayler to Get a Quality Dresses</h4>
+            <div class="text-center mb-5">
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Daftar Harga Konveksi Seragam" loading="lazy"></div>
+                <div class="sub-title">Daftar Harga Pabrik &amp; Estimasi Produksi</div>
+                <div class="sec-title">Minimal Order 12 Pcs — Makin Banyak Makin Hemat</div>
+            </div>
+            <div class="row" id="daftar-tarif-konveksi">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--konveksi">Paling Laris</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 7 – 12 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Kemeja Kerja Kantor & PDH/PDL</h4>
+                        <p class="evev-tarif-card__desc">Bahan American Drill / Nagata Drill asli tidak luntur, jahitan rantai kuat, gratis bordir logo dada + punggung (min. 12 pcs).</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Harga Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 85.000/pcs</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Kemeja%20Kerja%20Kantor%20%26%20PDH/PDL%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%2085.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%207%20%E2%80%93%2012%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Kemeja Kerja Kantor & PDH/PDL" data-wa-harga="Rp 85.000/pcs" data-wa-estimasi="7 – 12 Hari">
+                                <i class="fab fa-whatsapp"></i> Minta Quotation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--konveksi">Favorit Event</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 5 – 10 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Polo Shirt Bordir Komputer</h4>
+                        <p class="evev-tarif-card__desc">Bahan Lacoste CVC 20s/24s adem menyerap keringat, kerah manset kokoh tidak melar, bordir logo komputer super rapat & presisi.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Harga Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 65.000/pcs</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Polo%20Shirt%20Bordir%20Komputer%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%2065.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%205%20%E2%80%93%2010%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Polo Shirt Bordir Komputer" data-wa-harga="Rp 65.000/pcs" data-wa-estimasi="5 – 10 Hari">
+                                <i class="fab fa-whatsapp"></i> Minta Quotation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--konveksi">Standar K3</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 10 – 14 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Wearpack Safety & Seragam Pabrik</h4>
+                        <p class="evev-tarif-card__desc">American/Japan Drill tebal dilengkapi skotlet reflektor 3M menyala, resleting YKK, saku fungsional & jahitan pengunci bartack.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Harga Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 125.000/pcs</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Wearpack%20Safety%20%26%20Seragam%20Pabrik%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%20125.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%2010%20%E2%80%93%2014%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Wearpack Safety & Seragam Pabrik" data-wa-harga="Rp 125.000/pcs" data-wa-estimasi="10 – 14 Hari">
+                                <i class="fab fa-whatsapp"></i> Minta Quotation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--konveksi">Komunitas</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 10 – 14 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Jaket Bomber, Harrington & Windbreaker</h4>
+                        <p class="evev-tarif-card__desc">Bahan Taslan Waterproof / Mayer / Drill dengan furing akrilik/quilting nyaman, resleting kuat, dan bordir emblem komputer.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Harga Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 135.000/pcs</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Jaket%20Bomber%2C%20Harrington%20%26%20Windbreaker%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%20135.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%2010%20%E2%80%93%2014%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Jaket Bomber, Harrington & Windbreaker" data-wa-harga="Rp 135.000/pcs" data-wa-estimasi="10 – 14 Hari">
+                                <i class="fab fa-whatsapp"></i> Minta Quotation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--konveksi">Kaos & Event</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 5 – 7 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Kaos Combed 24s/30s Sablon Plastisol</h4>
+                        <p class="evev-tarif-card__desc">Katun Combed 100% reaktif dingin, jahitan pundak rantai, sablon plastisol/DTF awet tidak pecah untuk gathering & promosi.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Harga Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 55.000/pcs</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Kaos%20Combed%2024s/30s%20Sablon%20Plastisol%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Rp%2055.000/pcs%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%205%20%E2%80%93%207%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Kaos Combed 24s/30s Sablon Plastisol" data-wa-harga="Rp 55.000/pcs" data-wa-estimasi="5 – 7 Hari">
+                                <i class="fab fa-whatsapp"></i> Minta Quotation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--konveksi">Paket Korporat</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 12 – 18 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Paket Seragam Kantor 50+ Pcs (Harga Pabrik)</h4>
+                        <p class="evev-tarif-card__desc">Diskon khusus produksi massal 50–500+ pcs: gratis mockup desain digital, sampel ukuran S–5XL, invoice resmi & kirim se-Indonesia.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Harga Mulai</span>
+                                <div class="evev-tarif-card__price">Hubungi WA</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20/%20quotation%20produksi%3A%0A%0A%E2%80%A2%20Produk%20/%20Paket%20%3A%20Paket%20Seragam%20Kantor%2050%2B%20Pcs%20%28Harga%20Pabrik%29%0A%E2%80%A2%20Estimasi%20Harga%20%3A%20Hubungi%20WA%0A%E2%80%A2%20Estimasi%20Produksi%20%3A%2012%20%E2%80%93%2018%20Hari%0A%E2%80%A2%20Estimasi%20Jumlah%20%3A%2024%20pcs%0A%E2%80%A2%20Nama%20Instansi%20/%20Perusahaan%20/%20Komunitas%20%3A%20%0A%0AMohon%20info%20pilihan%20kain%2C%20bordir%20komputer%20%26%20sampel%20ukuran.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Paket Seragam Kantor 50+ Pcs (Harga Pabrik)" data-wa-harga="Hubungi WA" data-wa-estimasi="12 – 18 Hari">
+                                <i class="fab fa-whatsapp"></i> Minta Quotation
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Portofolio Karya -->
+    <!-- Highlight CTA Section -->
+    <section class="video-section">
+        <div class="video-section_bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/evevtayler/hero_konveksi_seragam.webp);"></div>
+        <div class="auto-container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h4 class="video-block_title">Butuh Penawaran Resmi &amp; Mockup Desain Seragam? <br> Kirim Logo Perusahaan Anda, Gratis Estimasi Hari Ini!</h4>
+                    <div class="mt-4">
+                        <a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" class="theme-btn btn-style-one" data-wa-umum="Halo Tim Konveksi evevtayler, saya ingin kirim logo untuk dibuatkan mockup & quotation harga seragam."><span>Kirim Logo &amp; Minta Quotation WA</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portofolio Produksi Konveksi -->
     <section id="galeri" class="gallery-section">
-        <div class="auto-continer">
+        <div class="auto-container">
             <div class="row row-3">
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-17.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/service_konveksi_seragam.webp" alt="Hasil Produksi Kemeja Kerja PDH Kantor" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-17.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/service_konveksi_seragam.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Hasil Kemeja PDH"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -401,11 +580,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-18.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/portfolio_seragam_komunitas.webp" alt="Hasil Produksi Seragam Komunitas dan Polo Bordir" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-18.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/portfolio_seragam_komunitas.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Seragam Komunitas"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -413,11 +592,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-19.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/hero_konveksi_seragam.webp" alt="Proses Jahit Massal di Pabrik Konveksi evevtayler" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-19.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/hero_konveksi_seragam.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Lini Produksi Konveksi"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -425,11 +604,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-20.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt="Quality Control Detail Jahitan dan Bordir Komputer" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-20.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/portfolio_detail_jahitan.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Detail Jahitan Konveksi"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -439,115 +618,112 @@
         </div>
     </section>
 
-    <!-- Our testimonials -->
-    <section class="our-testimonials-section-two">
+    <!-- Testimoni Klien Perusahaan & Komunitas -->
+    <section id="testimoni" class="our-testimonials-section-two">
         <div class="auto-container">
             <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Our testimonials </div>
-                <div class="sec-title">What They’re Saying</div>
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Testimoni Klien Konveksi evevtayler" loading="lazy"></div>
+                <div class="sub-title">Ulasan Klien Korporat &amp; Komunitas</div>
+                <div class="sec-title">Dipercaya Ratusan Instansi &amp; Perusahaan</div>
             </div>
             <div class="theme_carousel owl-theme owl-carousel owl-style-one" data-options='{"loop": true, "center": false, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "480" :{ "items" : "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "3" }}}'>
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-6.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
-                    <div class="testimonial-block-two_name">Budi Santoso</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-6.png" alt="Testimoni Eko Wahyudi HRGA Perusahaan Logistik" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Pesan 120 pcs kemeja PDH American Drill dan polo bordir untuk karyawan cabang Jakarta &amp; Bekasi. Bordir logo super rapi, ukuran konsisten, dan selesai 2 hari lebih cepat dari jadwal!"</div>
+                    <div class="testimonial-block-two_name">Eko Wahyudi</div>
+                    <div class="testimonial-block-two_dasignation">HRGA Manager — PT Logistik Nusantara</div>
                 </div>
 
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-7.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
-                    <div class="testimonial-block-two_name">Annisa Rahma</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-7.png" alt="Testimoni Sari Oktaviani Pengadaan Klinik" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Sudah 3 kali repeat order seragam perawat &amp; front office klinik kami di evevtayler. Kainnya adem dipakai shift panjang, invoice resmi lengkap, dan admin sangat responsif."</div>
+                    <div class="testimonial-block-two_name">Sari Oktaviani</div>
+                    <div class="testimonial-block-two_dasignation">Tim Pengadaan — Klinik Sehat Utama</div>
                 </div>
 
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-8.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
-                    <div class="testimonial-block-two_name">Hendro Wijaya</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-8.png" alt="Testimoni Raka Pratama Ketua Komunitas Touring" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Buat 45 pcs jaket bomber windbreaker untuk acara touring komunitas. Bahan taslan-nya tebal tapi nyaman, bordir emblem punggung tajam banget dan semua anggota puas!"</div>
+                    <div class="testimonial-block-two_name">Raka Pratama</div>
+                    <div class="testimonial-block-two_dasignation">Ketua Komunitas Otomotif — Jabodetabek</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Fun facts -->
+    <!-- Pencapaian & Kapasitas Produksi -->
     <section class="fun-facts-section-two">
         <div class="fun-facts-section-two-bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/background/bg-4.jpg);"></div>
         <div class="auto-container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                    <div class="sub-title">Fun facts</div>
-                    <div class="sec-title mb-30">Our Numbers Speaks <br> About Everything</div>
-                    <div class="fun-facts-section-two_description">There are many variations of passages of available but the not the majority have suffered alteration in form,simply free text by injected is randomised words which. </div>
+                    <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Kapasitas Produksi Konveksi evevtayler" loading="lazy"></div>
+                    <div class="sub-title">Kapasitas &amp; Standar Pabrik</div>
+                    <div class="sec-title mb-30">Siap Tangani Order 12 <br> hingga Ribuan Pcs</div>
+                    <div class="fun-facts-section-two_description">Didukung lini mesin jahit industri, obras, overdeck, bartack, dan bordir komputer internal sehingga jadwal produksi serta kualitas setiap seragam terkontrol penuh dari hulu ke hilir.</div>
 
                     <div class="progress-levels mb-30">
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Material</h5>
+                            <h5>Ketepatan Jadwal Pengiriman (On-Time Delivery)</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="88"><div class="percent"></div></div></div>
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="98"><div class="percent"></div></div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Stitching</h5>
+                            <h5>Presisi Bordir Komputer &amp; Jahitan Rantai</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="65"><div class="percent"></div></div></div>
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="99"><div class="percent"></div></div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Fabrics</h5>
+                            <h5>Klien Korporat &amp; Instansi Repeat Order</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="75"><div class="percent"></div></div></div>
-                                </div>                                
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="95"><div class="percent"></div></div></div>
+                                </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="col-lg-6 mb-30">
                     <div class="row no-gutters">
                         <div class="col-md-6">
-                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/resource/image-6.jpg);">
+                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/evevtayler/service_konveksi_seragam.webp);">
                                 <div class="content-middle">
                                     <div class="funfacts-block_icon"><i class="flaticon-suit"></i></div>
-                                    <h4 class="funfacts-block_title">Suits Stich</h4>
+                                    <h4 class="funfacts-block_title">Harga Tangan Pertama</h4>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="funfacts-block mb-0 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="content-middle">
                                     <div class="count-outer count-box funfacts-block_number">
-                                        <span class="count-text" data-speed="3000" data-stop="8800">0</span>
+                                        <span class="count-text" data-speed="3000" data-stop="35000">0</span><span class="plus">+</span>
                                     </div>
-                                    <h4 class="funfacts-block_title">Dresses Stitched</h4>
+                                    <h4 class="funfacts-block_title">Pcs Seragam Diproduksi</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 order-md-4">
-                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/resource/image-7.jpg);">
+                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/evevtayler/portfolio_seragam_komunitas.webp);">
                                 <div class="content-middle">
                                     <div class="funfacts-block_icon"><i class="flaticon-measuring"></i></div>
-                                    <h4 class="funfacts-block_title">Body Measure</h4>
+                                    <h4 class="funfacts-block_title">Gratis Mockup &amp; Size Pack</h4>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="funfacts-block mb-0 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="content-middle">
                                     <div class="count-outer count-box funfacts-block_number">
-                                        <span class="count-text" data-speed="3000" data-stop="24">0</span><span class="plus">+</span>
+                                        <span class="count-text" data-speed="3000" data-stop="280">0</span><span class="plus">+</span>
                                     </div>
-                                    <h4 class="funfacts-block_title">Expert evevtayler</h4>
+                                    <h4 class="funfacts-block_title">Perusahaan &amp; Komunitas</h4>
                                 </div>
                             </div>
                         </div>
@@ -557,81 +733,81 @@
         </div>
     </section>
 
-    <!-- Our Benefits -->
+    <!-- Keunggulan Konveksi -->
     <section class="benefits-section">
         <div class="auto-container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                    <div class="sub-title light">Our Benefits</div>
-                    <div class="sec-title light mb-30">Why You Should <br> Choose us?</div>
-                    <div class="benefits-section_description">There are many variations of passages of Lorem <br> Ipsum available, but the majority have suffered <br> alteration in some form. </div>
+                    <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Keunggulan Pabrik Konveksi evevtayler" loading="lazy"></div>
+                    <div class="sub-title light">Keunggulan Vendor Konveksi</div>
+                    <div class="sec-title light mb-30">Kenapa Instansi &amp; HRD <br> Memilih evevtayler?</div>
+                    <div class="benefits-section_description">Proses pemesanan transparan mulai dari konsultasi katalog kain, approval desain &amp; bordir, laporan progres produksi, hingga pengiriman aman sampai lokasi.</div>
                     <ul class="benefits-section_list">
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Urgent wedding dresses solutions.</li>
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Top quality services with reasonable price</li>
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Reliable & experienced evevtaylers</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 1" loading="lazy">Minimal order ringan 12 pcs, harga makin hemat untuk qty 50–500+ pcs.</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 2" loading="lazy">Update foto/video progres potong, bordir &amp; jahit langsung ke WhatsApp PIC.</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 3" loading="lazy">Mendukung penawaran resmi (quotation), invoice rapi &amp; pengiriman kargo seluruh Indonesia.</li>
                     </ul>
                 </div>
-               <div class="col-lg-6">
-                   <div class="benefits-section_image">
-                       <img src="assets/images/resource/image-24.jpg" alt="">
-                       <div class="benefits-section_icon-box">
-                           <div class="benefits-section_icon"><i class="flaticon-knitting"></i></div>
-                           <div class="benefits-section_text">Style <br> According <br> To Your Way</div>
-                       </div>
+                <div class="col-lg-6">
+                    <div class="benefits-section_image">
+                        <img src="assets/images/evevtayler/hero_konveksi_seragam.webp" alt="Workshop Produksi Konveksi Seragam evevtayler" loading="lazy">
+                        <div class="benefits-section_icon-box">
+                            <div class="benefits-section_icon"><i class="flaticon-knitting"></i></div>
+                            <div class="benefits-section_text">QC Ketat <br> Bordir Rapi &amp; <br> Tepat Deadline</div>
+                        </div>
                     </div>
-               </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- Panduan Bahan & Pemesanan Konveksi -->
     <section id="blog" class="news-section-two">
         <div class="auto-container">
             <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Latest Blog Posts</div>
-                <h2 class="sec-title">News & Articles</h2>
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Panduan Memilih Bahan Seragam" loading="lazy"></div>
+                <div class="sub-title">Panduan Pengadaan Seragam</div>
+                <h2 class="sec-title">Tips Memilih Bahan &amp; Bordir Seragam</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-1.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/service_konveksi_seragam.webp" alt="Perbandingan Bahan American Drill dan Nagata Drill untuk Seragam PDH" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">09 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Tim Konveksi</span> <i class="fal fa-tag"></i> <span>Bahan Drill</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, boleh minta perbandingan sampel kain American Drill & Nagata Drill?">American Drill vs Nagata Drill: Mana yang Lebih Tepat untuk Kemeja PDH?</a></h4>
+                                <div class="news-block-one_text">Pahami perbedaan ketebalan serat, daya serap keringat, dan kisaran harga sebelum menentukan bahan seragam kantor.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, boleh minta perbandingan sampel kain American Drill & Nagata Drill?">Minta Katalog Kain WA</a></div>
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-2.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/portfolio_seragam_komunitas.webp" alt="Tips Menentukan Ukuran dan Desain Polo Shirt Bordir Perusahaan" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">15 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Tim Konveksi</span> <i class="fal fa-tag"></i> <span>Polo Bordir</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya mau konsultasi pembuatan polo shirt bordir komputer.">Cara Memilih Bahan Polo Lacoste CVC Agar Tidak Melar &amp; Bordir Logo Tajam</a></h4>
+                                <div class="news-block-one_text">Hindari bahan tipis yang cepat berbulu—gunakan Lacoste CVC 20s/24s agar seragam kasual tim tetap prima.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, saya mau konsultasi pembuatan polo shirt bordir komputer.">Tanya Harga Polo WA</a></div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-3.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/hero_konveksi_seragam.webp" alt="Standar Kualitas Wearpack Safety Pabrik dan Reflektor K3" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">21 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>                                        
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Tim Konveksi</span> <i class="fal fa-tag"></i> <span>Safety K3</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya ingin minta quotation wearpack safety untuk proyek/pabrik.">5 Detail Wajib pada Wearpack Safety Proyek: Skotlet, Bartack &amp; Resleting</a></h4>
+                                <div class="news-block-one_text">Pastikan seragam teknisi dan pekerja lapangan aman, kuat menghadapi tarikan berat, dan nyaman di cuaca panas.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, saya ingin minta quotation wearpack safety untuk proyek/pabrik.">Minta Quotation WA</a></div>
                             </div>
                         </div>
                     </div>
@@ -640,89 +816,62 @@
         </div>
     </section>
 
-    <!-- Client Logo -->
-    <section class="client-logo style-two">
+    <!-- Footer -->
+    <footer id="kontak" class="main-footer">
         <div class="auto-container">
-            <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "center": false, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "480" :{ "items" : "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "3" } , "992":{ "items" : "4" }, "1200":{ "items" : "5" }}}'>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer id="kontak" class="main-footer" style="background-image: url(assets/images/background/bg-6.jpg);">
-        <div class="auto-container">
-            <!--Widgets Section-->
             <div class="widgets-section">
                 <div class="row">
-                    
-                    <!--Column-->
                     <div class="column col-lg-5 col-md-12">
                         <div class="widget about-widget">
-                            <div class="about-widget_text">
-                                Pusat jasa jahit busana, vermak kilat pakaian harian &amp; konveksi seragam terpercaya di Jakarta Timur.
+                            <div class="about-widget_text" data-config="tagline">
+                                Vermak Kilat 15–30 Menit, Jahit Jas &amp; Kebaya Bespoke, hingga Konveksi Seragam Bergaransi.
                             </div>
-                            <div class="about-widget_phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                            <div class="about-widget_phone"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                             <ul class="about-widget_social-links">
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-wa-umum=""><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!--Column-->
                     <div class="column col-lg-7 col-md-12">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-5">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Layanan Jahit</h4>
+                                    <h4 class="widget-title">Produk Konveksi</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#layanan">Outerwear</a></li>
-                                            <li><a href="#layanan">Kemeja Kerja Kantor &amp; PDH (Rp 85.000/pcs)</a></li>
-                                            <li><a href="#layanan">Wearpack Safety Pabrik (Rp 125.000/pcs)</a></li>
-                                            <li><a href="#layanan">Jaket Bomber &amp; Windbreaker (Rp 135.000/pcs)</a></li>
-                                        </ul>                                        
+                                            <li><a href="#daftar-harga">Kemeja Kerja &amp; PDH (Rp 85.000/pcs)</a></li>
+                                            <li><a href="#daftar-harga">Polo Shirt Bordir (Rp 65.000/pcs)</a></li>
+                                            <li><a href="#daftar-harga">Wearpack Safety (Rp 125.000/pcs)</a></li>
+                                            <li><a href="#daftar-harga">Jaket Bomber (Rp 135.000/pcs)</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Links</h4>
+                                    <h4 class="widget-title">Navigasi Cepat</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#tentang">About</a></li>
-                                            <li><a href="#tentang">Meet the Team</a></li>
-                                            <li><a href="#galeri">Our Portofolio Karya</a></li>
-                                            <li><a href="#kontak">Contact</a></li>
-                                        </ul>                    
+                                            <li><a href="#tentang">Tentang Pabrik</a></li>
+                                            <li><a href="#daftar-harga">Daftar Harga Grosir</a></li>
+                                            <li><a href="#galeri">Portofolio Klien</a></li>
+                                            <li><a href="#testimoni">Testimoni Instansi</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Legal</h4>
+                                    <h4 class="widget-title">Varian Layanan</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#tentang">Help</a></li>
-                                            <li><a href="#tentang">Terms of Use</a></li>
-                                            <li><a href="#tentang">Privacy Policy</a></li>
-                                        </ul>                                        
+                                            <li><a href="template-1.html">Vermak Kilat</a></li>
+                                            <li><a href="template-2.html">Jas &amp; Kebaya</a></li>
+                                            <li><a href="template-3.html">Konveksi Seragam</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -730,32 +879,46 @@
                         <div class="footer-border-bottom mb-40"></div>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="contact-widget_address-title">Alamat Workshop Kami</div>
-                                <div class="contact-widget_address mb-40"> Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur</div>
+                                <div class="contact-widget_address-title">Alamat Pabrik &amp; Jam Operasional</div>
+                                <div class="contact-widget_address mb-2" data-config="alamat">Jl. Otista Raya No. 88, Bidara Cina, Jatinegara, Jakarta Timur 13330</div>
+                                <div class="contact-widget_address mb-40" data-config="jamOperasional">Buka Setiap Hari: 08.00 – 21.00 WIB</div>
                             </div>
                             <div class="col-md-6">
-                                <div class="contact-widget_mail-title">Email &amp; Konsultasi</div>
-                                <div class="contact-widget_mail mb-40"><a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a></div>
+                                <div class="contact-widget_mail-title">Email PO &amp; Hotline WA</div>
+                                <div class="contact-widget_mail mb-2"><a href="mailto:kontak@evevdigital.com" data-config="email">kontak@evevdigital.com</a></div>
+                                <div class="contact-widget_mail mb-40"><a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="auto-container">
-                <div class="copyright">&copy; 2026 evevtayler (EvEvDigital). Seluruh Hak Cipta Dilindungi.</div>
+                <div class="copyright">&copy; 2026 <strong>evevtayler</strong>. Seluruh Hak Cipta Dilindungi. Ditenagai oleh <strong>EvEvDigital</strong>.</div>
             </div>
         </div>
     </footer>
-	
-</div>
-<!--End pagewrapper-->
 
-<!--Scroll to top-->
-<div class="scroll-to-top"><a href="#" class="back-to-top " data-wow-duration="1.0s " data-wow-delay="1.0s "><i class="fa fa-angle-up "></i></a></div>
+</div>
+<!-- End pagewrapper -->
+
+<!-- Scroll to top -->
+<div class="scroll-to-top"><a href="#" class="back-to-top" aria-label="Kembali ke atas"><i class="fa fa-angle-up"></i></a></div>
+
+<!-- Floating Template Switcher Bar -->
+<div id="evev-template-switcher" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 99998; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif;">
+    <span style="color: #FCD34D; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 0 6px;">PILIH TEMPLATE:</span>
+    <a href="template-1.html" class="switcher-pill" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #F1F5F9;">1. Vermak Kilat</a>
+    <a href="template-2.html" class="switcher-pill" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #F1F5F9;">2. Jas &amp; Kebaya Bespoke</a>
+    <a href="template-3.html" class="switcher-pill active" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: #065F46; color: #FFFFFF;">3. Konveksi Seragam</a>
+</div>
+
+<!-- Floating WhatsApp Button (WCAG AAA Contrast > 7:1) -->
+<a href="https://wa.me/62895323418658?text=Halo%20Tim%20Konveksi%20evevtayler%2C%20saya%20ingin%20meminta%20penawaran%20harga%20konveksi%20seragam%20kerja%2C%20polo%20shirt%20bordir%2C%20atau%20wearpack." class="floating-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Minta Penawaran Konveksi Seragam via WhatsApp evevtayler" data-wa-umum="Halo Tim Konveksi evevtayler, saya ingin meminta penawaran harga seragam kerja/komunitas.">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span>Minta Quotation WA</span>
+</a>
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/popper.min.js"></script>
@@ -771,29 +934,8 @@
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/jquery.ajaxchimp.min.js"></script>
 <script src="assets/js/parallax-scroll.js"></script>
-
 <script src="assets/js/script.js"></script>
-
-
-
-    <script src="assets/js/profil-usaha.js"></script>
-    <script src="assets/js/theme-toggle.js"></script>
-
-
-<!-- Floating Template Switcher Bar -->
-<div id="evev-template-switcher" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 99999; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif;">
-    <span style="color: #F59E0B; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 0 6px;">PILIH TEMPLATE:</span>
-    <a href="template-1.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">1. Vermak Kilat</a>
-    <a href="template-2.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">2. Jas &amp; Kebaya Bespoke</a>
-    <a href="template-3.html" class="switcher-pill active" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: #059669; color: #FFFFFF;">3. Konveksi Seragam</a>
-</div>
-
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/62895323418658?text=Halo%20evevtayler,%20saya%20ingin%20konsultasi%20jahit%20atau%20vermak%20baju" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; z-index: 99999; background: #25D366; color: white; border-radius: 50px; padding: 12px 22px; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45); font-family: 'Plus Jakarta Sans', sans-serif; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    <i class="fab fa-whatsapp" style="font-size: 22px;"></i>
-    <span>Konsultasi Jahit WA</span>
-</a>
-
+<script src="assets/js/profil-usaha.js"></script>
+<script src="assets/js/theme-toggle.js"></script>
 </body>
 </html>

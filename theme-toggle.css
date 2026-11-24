@@ -1,0 +1,620 @@
+/* =====================================================================
+   EvEvDigital Dual Theme Engine (Dark & Light Mode) — WCAG AAA (> 7:1)
+   Sektor 08: Penjahit Busana, Vermak Express & Konveksi Seragam (evevtayler)
+   ===================================================================== */
+
+:root {
+  --theme-transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  --evev-bg-primary: #ffffff;
+  --evev-bg-secondary: #f8fafc;
+  --evev-bg-card: #ffffff;
+  --evev-bg-elevated: #f1f5f9;
+  --evev-text-main: #0f172a;       /* 17.85:1 on #ffffff */
+  --evev-text-muted: #334155;      /* 10.35:1 on #ffffff, 9.90:1 on #f8fafc */
+  --evev-border: #cbd5e1;
+  --evev-accent: #92400e;          /* 7.09:1 on #ffffff */
+  --evev-accent-deep: #78350f;     /* 9.07:1 on #ffffff */
+  --evev-bespoke: #3730a3;         /* 9.93:1 on #ffffff */
+  --evev-wa-bg: #166534;           /* 7.13:1 with #ffffff text */
+  --evev-wa-bg-hover: #14532d;     /* 9.11:1 with #ffffff text */
+  --evev-wa-text: #14532d;         /* 9.11:1 on #ffffff */
+  --evev-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  color-scheme: light;
+}
+
+/* Dark Mode Palette — High Contrast (> 7:1) */
+[data-theme="dark"] {
+  --evev-bg-primary: #0b1120;
+  --evev-bg-secondary: #111827;
+  --evev-bg-card: #162032;
+  --evev-bg-elevated: #1e293b;
+  --evev-text-main: #f8fafc;       /* 18.00:1 on #0b1120, 15.60:1 on #162032 */
+  --evev-text-muted: #cbd5e1;      /* 12.60:1 on #0b1120, 10.99:1 on #162032 */
+  --evev-border: #334155;
+  --evev-accent: #fcd34d;          /* 11.32:1 on #162032 */
+  --evev-accent-deep: #fde68a;
+  --evev-bespoke: #a5b4fc;         /* 8.39:1 on #162032 */
+  --evev-wa-bg: #166534;           /* 7.13:1 with #ffffff text */
+  --evev-wa-bg-hover: #14532d;
+  --evev-wa-text: #86efac;         /* 11.62:1 on #162032 */
+  --evev-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}
+
+/* Anti-FOUC: nonaktifkan transisi selama initial paint */
+html.theme-preload *,
+html.theme-preload *::before,
+html.theme-preload *::after {
+  transition: none !important;
+}
+
+html,
+body,
+.page-wrapper,
+.main-header,
+.header-top-two,
+.header-upper,
+.sticky-header,
+section,
+.feature-block,
+.service-block-three,
+.evev-tarif-card,
+.testimonial-block-two,
+.funfacts-block,
+.news-block-one_inner-box {
+  transition: var(--theme-transition);
+}
+
+/* =====================================================================
+   LIGHT MODE HIGH-CONTRAST BASE (> 7:1)
+   ===================================================================== */
+[data-theme="light"] body {
+  background-color: var(--evev-bg-primary);
+  color: var(--evev-text-main);
+}
+
+[data-theme="light"] .sec-title,
+[data-theme="light"] .service-block-three_title,
+[data-theme="light"] .feature-block_title,
+[data-theme="light"] .testimonial-block-two_name,
+[data-theme="light"] .news-block-one_title a,
+[data-theme="light"] .evev-tarif-card__title {
+  color: var(--evev-text-main);
+}
+
+[data-theme="light"] .sub-title:not(.light) {
+  color: var(--evev-accent);
+  font-weight: 700;
+}
+
+[data-theme="light"] .introduction-block_text,
+[data-theme="light"] .introduction-block_list li,
+[data-theme="light"] .service-block-three_text,
+[data-theme="light"] .testimonial-block-two_text,
+[data-theme="light"] .testimonial-block-two_dasignation,
+[data-theme="light"] .fun-facts-section-two_description,
+[data-theme="light"] .news-block-one_text,
+[data-theme="light"] .evev-tarif-card__desc,
+[data-theme="light"] .evev-tarif-card__time,
+[data-theme="light"] .evev-tarif-card__label {
+  color: var(--evev-text-muted);
+}
+
+/* Header Style Two pada Light Mode — kontras tajam */
+[data-theme="light"] .main-header.header-style-two,
+[data-theme="light"] .header-top-two,
+[data-theme="light"] .main-header.header-style-two .header-upper,
+[data-theme="light"] .main-header.header-style-two .sticky-header {
+  background-color: #0b1120;
+}
+
+[data-theme="light"] .header-top-two a,
+[data-theme="light"] .header-top-two_mail-title,
+[data-theme="light"] .header-top-two_phone-title,
+[data-theme="light"] .main-header.header-style-two .main-menu .navigation > li > a {
+  color: #f8fafc !important;
+}
+
+/* =====================================================================
+   DARK MODE FULL COVERAGE — SEKTOR 08 EVEVTAYLER (> 7:1)
+   ===================================================================== */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] .page-wrapper {
+  background-color: var(--evev-bg-primary) !important;
+  color: var(--evev-text-main) !important;
+}
+
+[data-theme="dark"] .main-header,
+[data-theme="dark"] .header-top,
+[data-theme="dark"] .header-top-two,
+[data-theme="dark"] .header-upper,
+[data-theme="dark"] .sticky-header {
+  background-color: #0b1120 !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+[data-theme="dark"] .features-section,
+[data-theme="dark"] .introduction-section,
+[data-theme="dark"] .service-offer-section,
+[data-theme="dark"] .gallery-section,
+[data-theme="dark"] .our-testimonials-section-two,
+[data-theme="dark"] .fun-facts-section-two,
+[data-theme="dark"] .news-section-two,
+[data-theme="dark"] .client-logo {
+  background-color: var(--evev-bg-primary) !important;
+  color: var(--evev-text-main) !important;
+}
+
+[data-theme="dark"] .evev-tarif-section,
+[data-theme="dark"] .benefits-section {
+  background-color: var(--evev-bg-secondary) !important;
+  color: var(--evev-text-main) !important;
+}
+
+[data-theme="dark"] .fun-facts-section-two-bg {
+  opacity: 0.1 !important;
+}
+
+/* Elevated Cards in Dark Mode */
+[data-theme="dark"] .feature-block,
+[data-theme="dark"] .service-block-three,
+[data-theme="dark"] .evev-tarif-card,
+[data-theme="dark"] .testimonial-block-two,
+[data-theme="dark"] .funfacts-block,
+[data-theme="dark"] .news-block-one_inner-box,
+[data-theme="dark"] .news-block-one_lower-content,
+[data-theme="dark"] .introduction-block_content,
+[data-theme="dark"] .main-menu .navigation > li > ul {
+  background-color: var(--evev-bg-card) !important;
+  color: var(--evev-text-main) !important;
+  border-color: var(--evev-border) !important;
+  box-shadow: var(--evev-shadow) !important;
+}
+
+/* Typography in Dark Mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .sec-title,
+[data-theme="dark"] .main-menu .navigation > li > a,
+[data-theme="dark"] .main-menu .navigation > li > ul > li > a,
+[data-theme="dark"] .header-top-two a,
+[data-theme="dark"] .feature-block_title,
+[data-theme="dark"] .introduction-block_text-two,
+[data-theme="dark"] .introduction-block-phone a,
+[data-theme="dark"] .service-block-three_title,
+[data-theme="dark"] .evev-tarif-card__title,
+[data-theme="dark"] .testimonial-block-two_name,
+[data-theme="dark"] .funfacts-block_title,
+[data-theme="dark"] .funfacts-block_number,
+[data-theme="dark"] .progress-box h5,
+[data-theme="dark"] .news-block-one_title a {
+  color: var(--evev-text-main) !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .header-top-two_mail-title,
+[data-theme="dark"] .header-top-two_phone-title,
+[data-theme="dark"] .feature-block_text,
+[data-theme="dark"] .introduction-block_text,
+[data-theme="dark"] .introduction-block_list li,
+[data-theme="dark"] .introduction-block_phone-title,
+[data-theme="dark"] .service-block-three_text,
+[data-theme="dark"] .evev-tarif-card__desc,
+[data-theme="dark"] .evev-tarif-card__time,
+[data-theme="dark"] .evev-tarif-card__label,
+[data-theme="dark"] .testimonial-block-two_text,
+[data-theme="dark"] .testimonial-block-two_dasignation,
+[data-theme="dark"] .fun-facts-section-two_description,
+[data-theme="dark"] .benefits-section_description,
+[data-theme="dark"] .benefits-section_list li,
+[data-theme="dark"] .news-block-one_text,
+[data-theme="dark"] .news-block-one_post-meta,
+[data-theme="dark"] .news-block-one_post-meta span {
+  color: var(--evev-text-muted) !important;
+}
+
+[data-theme="dark"] .sub-title,
+[data-theme="dark"] .evev-tarif-card__price,
+[data-theme="dark"] .evev-service-price,
+[data-theme="dark"] .news-block-one_read_more_link {
+  color: var(--evev-accent) !important;
+}
+
+[data-theme="dark"] .evev-service-wa {
+  color: var(--evev-wa-text) !important;
+}
+
+/* Hero & Video Scrim Protection (Always Sharp White on Dark Overlay) */
+.banner-section .swiper-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-section .swiper-slide::before,
+.video-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 10, 14, 0.72) 0%, rgba(7, 10, 14, 0.78) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner-section .content-outer,
+.video-section .auto-container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-section .content-box h1,
+.banner-section .content-box h4,
+.video-block_title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* Feature Hover Content Protection */
+.feature-block_hover-content .feature-block_title,
+.feature-block_hover-content .feature-block_text {
+  color: #ffffff !important;
+}
+
+/* =====================================================================
+   THEME TOGGLE BUTTON (ACCESSIBLE & SMOOTH)
+   ===================================================================== */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  font-size: 17px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.16);
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus-visible {
+  transform: scale(1.08);
+  outline: 2px solid #fcd34d;
+  outline-offset: 2px;
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #fcd34d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+/* =====================================================================
+   SYMMETRICAL TARIFF & SERVICE CARDS (100% READABLE, ZERO CLIPPING)
+   ===================================================================== */
+.service-block-three {
+  height: 100%;
+  overflow: visible !important;
+}
+
+.service-block-three_title,
+.service-block-three_text {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.evev-service-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--evev-border);
+}
+
+.evev-service-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--evev-accent);
+  white-space: nowrap;
+}
+
+.evev-service-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--evev-wa-text) !important;
+  text-decoration: none;
+}
+
+.evev-service-wa:hover {
+  text-decoration: underline;
+}
+
+.evev-tarif-section {
+  padding: 84px 0 64px;
+  background-color: var(--evev-bg-secondary);
+}
+
+.evev-tarif-card {
+  background: var(--evev-bg-card);
+  border: 1px solid var(--evev-border);
+  border-radius: 14px;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--evev-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.28s ease;
+}
+
+.evev-tarif-card:hover {
+  transform: translateY(-4px);
+}
+
+.evev-tarif-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.evev-tarif-card__badge {
+  background: #78350f;
+  color: #ffffff !important;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 4px 11px;
+  border-radius: 999px;
+}
+
+.evev-tarif-card__badge--bespoke {
+  background: #3730a3;
+}
+
+.evev-tarif-card__badge--konveksi {
+  background: #065f46;
+}
+
+.evev-tarif-card__time {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--evev-text-muted);
+}
+
+.evev-tarif-card__title {
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--evev-text-main);
+  margin-bottom: 10px;
+}
+
+.evev-tarif-card__desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--evev-text-muted);
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.evev-tarif-card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--evev-border);
+}
+
+.evev-tarif-card__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--evev-text-muted);
+}
+
+.evev-tarif-card__price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--evev-accent);
+  white-space: nowrap;
+}
+
+.evev-tarif-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--evev-wa-bg);
+  color: #ffffff !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 18px;
+  min-height: 44px;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.evev-tarif-card__btn:hover {
+  background: var(--evev-wa-bg-hover);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* =====================================================================
+   SOLID HIGH-CONTRAST FOOTER (#070A0E) — CONTRAST > 11:1
+   ===================================================================== */
+footer,
+.main-footer,
+.footer-bottom,
+[data-theme="light"] .main-footer,
+[data-theme="light"] .footer-bottom,
+[data-theme="dark"] .main-footer,
+[data-theme="dark"] .footer-bottom {
+  background-color: #070a0e !important;
+  background-image: none !important;
+  color: #f1f5f9 !important;
+  border-top: 1px solid #1e293b !important;
+}
+
+.main-footer h1,
+.main-footer h2,
+.main-footer h3,
+.main-footer h4,
+.main-footer h5,
+.main-footer h6,
+.main-footer .widget-title,
+.main-footer .contact-widget_address-title,
+.main-footer .contact-widget_mail-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.main-footer p,
+.main-footer span,
+.main-footer li,
+.main-footer .about-widget_text,
+.main-footer .contact-widget_address,
+.main-footer .copyright {
+  color: #f1f5f9 !important;
+  opacity: 1 !important;
+}
+
+.main-footer a {
+  color: #7dd3fc !important;
+  transition: color 0.2s ease;
+}
+
+.main-footer a:hover {
+  color: #ffffff !important;
+}
+
+/* =====================================================================
+   FLOATING WHATSAPP BUTTON — WCAG AAA CONTRAST (#FFFFFF ON #166534 = 7.13:1)
+   ===================================================================== */
+.floating-wa-btn,
+.wa-floating,
+.wa-float-pill,
+.wa-floating-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  background-color: var(--evev-wa-bg) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  min-height: 48px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(22, 101, 52, 0.45);
+  text-decoration: none !important;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-wa-btn:hover,
+.wa-floating:hover,
+.wa-float-pill:hover,
+.wa-floating-pill:hover {
+  background-color: var(--evev-wa-bg-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(20, 83, 45, 0.6);
+}
+
+.floating-wa-btn i,
+.floating-wa-btn span {
+  color: #ffffff !important;
+}
+
+.floating-wa-btn i {
+  font-size: 20px;
+}
+
+/* =====================================================================
+   DARK SURFACE & IMAGE-BACKED CARD CONTRAST PROTECTION (> 7:1 BOTH MODES)
+   ===================================================================== */
+.benefits-section {
+  background-color: #0b1120 !important;
+  color: #f8fafc !important;
+}
+
+.benefits-section .sec-title.light,
+.benefits-section .sub-title.light,
+.benefits-section .benefits-section_description,
+.benefits-section .benefits-section_list li {
+  color: #f8fafc !important;
+}
+
+.funfacts-block[style*="background-image"] {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.funfacts-block[style*="background-image"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 10, 14, 0.76);
+  z-index: 0;
+}
+
+.funfacts-block[style*="background-image"] .content-middle {
+  position: relative;
+  z-index: 2;
+}
+
+.funfacts-block[style*="background-image"] .funfacts-block_title,
+.funfacts-block[style*="background-image"] .funfacts-block_icon i {
+  color: #ffffff !important;
+}
+
+/* Pastikan dropdown menu dan mobile menu tajam di kedua mode */
+.mobile-menu .menu-box {
+  background-color: #0b1120 !important;
+}
+
+.mobile-menu .navigation li > a,
+.mobile-menu .social-links li a {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .btn-style-one,
+[data-theme="dark"] .theme-btn.btn-style-one {
+  background-color: #92400e !important;
+  color: #ffffff !important;
+  border-color: #92400e !important;
+}
+
+[data-theme="dark"] .btn-style-one span,
+[data-theme="dark"] .theme-btn.btn-style-one span {
+  color: #ffffff !important;
+}

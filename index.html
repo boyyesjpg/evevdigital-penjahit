@@ -1,31 +1,284 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
 <meta charset="utf-8">
-<title>evevtayler - Jasa Vermak Pakaian Kilat 15-30 Menit &amp; Potong Celana Express Jakarta Timur</title>
+<title>evevtayler | Jasa Vermak Pakaian Kilat 15–30 Menit &amp; Potong Celana Express Jakarta Timur</title>
+<meta name="description" content="evevtayler melayani vermak pakaian kilat 15-30 menit bisa ditunggu di Jakarta Timur: potong celana jeans sambung original, kecilkan pinggang, ganti resleting YKK, permak gamis & kemeja, hingga jahit jas/kebaya bergaransi pas di badan.">
+
+<!-- Anti-FOUC Theme Initializer -->
+<script>
+(function () {
+    var root = document.documentElement;
+    root.classList.add("theme-preload");
+    var theme = null;
+    try { theme = localStorage.getItem("evevdigital_theme_preference"); } catch (e) {}
+    if (theme !== "dark" && theme !== "light") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    root.setAttribute("data-theme", theme);
+    root.style.colorScheme = theme;
+})();
+</script>
+
 <!-- Stylesheets -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
-<!-- Responsive File -->
 <link href="assets/css/responsive.css" rel="stylesheet">
-<!-- Color File -->
 <link href="assets/css/color.css" rel="stylesheet">
+<link href="assets/css/theme-toggle.css" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/theme-toggle.css">
+<style>
+    /* Konsistensi object-fit: cover & proporsi gambar */
+    .feature-block_image img,
+    .introduction-block_image img,
+    .service-block-three_image img,
+    .gallery-block_image img,
+    .testimonial-block-two_image img,
+    .benefits-section_image img,
+    .news-block-one_image img {
+        object-fit: cover;
+    }
+    .feature-block_image img { width: 100%; height: 240px; }
+    .service-block-three_image img { width: 140px; height: 140px; border-radius: 50%; }
+    .gallery-block_image img { width: 100%; height: 290px; display: block; }
+    .news-block-one_image img { width: 100%; height: 240px; display: block; }
+    .testimonial-block-two_image img { width: 84px; height: 84px; border-radius: 50%; }
+    .benefits-section_image img { width: 100%; height: 420px; border-radius: 10px; }
+
+    /* Kartu Layanan Utama 100% terbaca jelas tanpa terpotong */
+    .service-block-three {
+        height: 100%;
+        overflow: visible !important;
+    }
+    .service-block-three_title {
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        margin-bottom: 10px;
+    }
+    .service-block-three_text {
+        font-size: 14.5px !important;
+        line-height: 1.65 !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        margin-bottom: 14px;
+    }
+    .evev-service-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px dashed rgba(100, 116, 139, 0.35);
+    }
+    .evev-service-price {
+        font-size: 18px;
+        font-weight: 800;
+        color: #b45309;
+    }
+    .evev-service-wa {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #15803d !important;
+        text-decoration: none;
+    }
+    .evev-service-wa:hover { text-decoration: underline; }
+
+    /* Grid Daftar Tarif Lengkap & Transparan */
+    .evev-tarif-section {
+        padding: 84px 0 64px;
+        background-color: #f8fafc;
+    }
+    .evev-tarif-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 24px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .evev-tarif-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 34px rgba(15, 23, 42, 0.1);
+    }
+    .evev-tarif-card__head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+    .evev-tarif-card__badge {
+        background: #92400e;
+        color: #ffffff !important;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        padding: 4px 11px;
+        border-radius: 999px;
+    }
+    .evev-tarif-card__time {
+        font-size: 12.5px;
+        font-weight: 700;
+        color: #334155;
+    }
+    .evev-tarif-card__title {
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 1.35;
+        color: #0f172a;
+        margin-bottom: 10px;
+    }
+    .evev-tarif-card__desc {
+        font-size: 14px;
+        line-height: 1.65;
+        color: #334155;
+        margin-bottom: 18px;
+        flex-grow: 1;
+    }
+    .evev-tarif-card__foot {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 16px;
+        border-top: 1px dashed #cbd5e1;
+    }
+    .evev-tarif-card__label {
+        display: block;
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #475569;
+    }
+    .evev-tarif-card__price {
+        font-size: 20px;
+        font-weight: 800;
+        color: #92400e;
+        white-space: nowrap;
+    }
+    .evev-tarif-card__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: #166534;
+        color: #ffffff !important;
+        font-size: 13.5px;
+        font-weight: 700;
+        padding: 10px 18px;
+        min-height: 44px;
+        border-radius: 50px;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .evev-tarif-card__btn:hover {
+        background: #14532d;
+        color: #ffffff !important;
+        transform: translateY(-2px);
+    }
+
+    /* Banner Hero Scrim untuk keterbacaan teks */
+    .banner-section .swiper-slide {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+    .banner-section .swiper-slide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.72) 100%);
+        pointer-events: none;
+    }
+    .banner-section .content-outer {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Header Theme Toggle Placement */
+    .evev-header-actions {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 14px;
+    }
+
+    /* Dark Mode compatibility untuk section tarif & kartu */
+    [data-theme="dark"] .evev-tarif-section {
+        background-color: #0b1120 !important;
+    }
+    [data-theme="dark"] .evev-tarif-card,
+    [data-theme="dark"] .service-block-three,
+    [data-theme="dark"] .testimonial-block-two {
+        background-color: #162032 !important;
+        border-color: #334155 !important;
+    }
+    [data-theme="dark"] .evev-tarif-card__title,
+    [data-theme="dark"] .service-block-three_title,
+    [data-theme="dark"] .testimonial-block-two_name {
+        color: #f8fafc !important;
+    }
+    [data-theme="dark"] .evev-tarif-card__desc,
+    [data-theme="dark"] .evev-tarif-card__time,
+    [data-theme="dark"] .evev-tarif-card__label,
+    [data-theme="dark"] .service-block-three_text,
+    [data-theme="dark"] .testimonial-block-two_text {
+        color: #cbd5e1 !important;
+    }
+    [data-theme="dark"] .evev-tarif-card__price,
+    [data-theme="dark"] .evev-service-price {
+        color: #fcd34d !important;
+    }
+    [data-theme="dark"] .evev-service-wa {
+        color: #86efac !important;
+    }
+
+    /* Mobile spacing agar tidak tabrakan antara Switcher & Floating WA */
+    @media only screen and (max-width: 767px) {
+        #evev-template-switcher {
+            bottom: 78px !important;
+            max-width: 94vw !important;
+            padding: 6px 10px !important;
+            gap: 5px !important;
+            overflow-x: auto;
+        }
+        #evev-template-switcher > span {
+            display: none !important;
+        }
+        #evev-template-switcher .switcher-pill {
+            padding: 7px 11px !important;
+            font-size: 11.5px !important;
+            white-space: nowrap;
+        }
+        .main-footer {
+            padding-bottom: 135px !important;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -42,21 +295,20 @@
                     <div class="left-column">
                         <div class="header-top-two_contact-info">
                             <div class="header-top-two_contact-info-icon"><i class="fal fa-envelope-open-text"></i></div>
-                            <div class="header-top-two_mail-title">Send Email</div>
-                            <div class="header-top-two-mail"><a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a></div>
+                            <div class="header-top-two_mail-title">Email &amp; Jam Buka</div>
+                            <div class="header-top-two-mail"><a href="mailto:kontak@evevdigital.com" data-config="email">kontak@evevdigital.com</a></div>
                         </div>
                     </div>
                     <div class="middle-column">
-                        <!--Logo-->
                         <div class="logo-box">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler Penjahit dan Vermak Express"></a></div>
                         </div>
                     </div>
                     <div class="right-column">
                         <div class="header-top-two_contact-info">
                             <div class="header-top-two_contact-info-icon"><i class="flaticon-phone-call"></i></div>
-                            <div class="header-top-two_phone-title">Call Anytime</div>
-                            <div class="header-top-two-phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                            <div class="header-top-two_phone-title">Booking &amp; Konsultasi WA</div>
+                            <div class="header-top-two-phone"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                         </div>
                     </div>
                 </div>
@@ -67,104 +319,91 @@
         <div class="header-upper">
             <div class="auto-container">
                 <div class="inner-container">
-                    <!--Logo-->
                     <div class="logo-box d-none">
-                        <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler"></a></div>
                     </div>
-                    <!--Nav Box-->
-                    <div class="nav-outer">
-                        <!--Mobile Navigation Toggler-->
-                        <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt=""></div>
+                    <div class="nav-outer d-flex align-items-center justify-content-between">
+                        <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt="Buka Menu Navigasi"></div>
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation">
-                                    <li class="dropdown"><a href="index.html">Home</a>
+                                    <li class="dropdown current"><a href="index.html">Pilih Desain</a>
                                         <ul>
-                                            <li><a href="index.html">Home Page 01</a></li>
-                                            <li><a href="index.html">Home Page 02</a></li>
+                                            <li class="current"><a href="template-1.html">Template 1: Vermak Kilat 15–30 Menit</a></li>
+                                            <li><a href="template-2.html">Template 2: Jas &amp; Kebaya Bespoke</a></li>
+                                            <li><a href="template-3.html">Template 3: Konveksi Seragam Kerja</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#tentang">About</a></li>                                       
-                                    <li class="dropdown"><a href="#">Layanan Jahit</a>
+                                    <li><a href="#tentang">Tentang Kami</a></li>
+                                    <li class="dropdown"><a href="#layanan">Layanan &amp; Tarif</a>
                                         <ul>
-                                            <li><a href="#layanan">Our Layanan Jahit</a>
-                                            </li>
-                                            <li><a href="#layanan">Outerwear</a></li>
+                                            <li><a href="#layanan">Vermak Express Bisa Ditunggu</a></li>
+                                            <li><a href="#daftar-harga">Daftar Tarif Lengkap</a></li>
                                             <li><a href="#layanan">Potong Celana Jeans &amp; Bahan (Rp 15.000)</a></li>
-                                            <li><a href="#layanan">Ganti Resleting YKK Celana/Jaket (Rp 20.000)</a></li>
-                                            <li><a href="#layanan">Permak Baju Gamis &amp; Dress (Rp 35.000)</a></li>
                                             <li><a href="#layanan">Kecilkan Pinggang &amp; Paha (Rp 25.000)</a></li>
-                                            <li><a href="#layanan">Accessories</a></li>
+                                            <li><a href="#layanan">Ganti Resleting YKK (Rp 20.000)</a></li>
+                                            <li><a href="#layanan">Permak Gamis &amp; Dress (Rp 35.000)</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">Pages</a>
-                                        <ul>
-                                            <li><a href="#tentang">evevtayler</a></li>
-                                            <li><a href="#galeri">Portofolio Karya</a></li>
-                                            <li><a href="#tentang">FAQ</a></li>
-                                            <li><a href="#">404 Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="#blog">Blog </a></li>
-                                            <li><a href="#blog">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#kontak">Contact</a></li>
+                                    <li><a href="#galeri">Portofolio</a></li>
+                                    <li><a href="#testimoni">Testimoni</a></li>
+                                    <li><a href="#blog">Tips Busana</a></li>
+                                    <li><a href="#kontak">Lokasi &amp; Kontak</a></li>
                                 </ul>
                             </div>
                         </nav>
+
+                        <div class="evev-header-actions">
+                            <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti Tema Gelap atau Terang" title="Ganti ke Mode Gelap">
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--End Header Upper-->
 
-        <!-- Sticky Header  -->
+        <!-- Sticky Header -->
         <div class="sticky-header">
             <div class="header-upper">
                 <div class="auto-container">
                     <div class="inner-container">
-                        <!--Logo-->
                         <div class="logo-box">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler"></a></div>
                         </div>
                         <div class="right-column">
-                            <!--Nav Box-->
-                            <div class="nav-outer">
-                                <!--Mobile Navigation Toggler-->
-                                <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png" alt=""></div>
-    
-                                <!-- Main Menu -->
-                                <nav class="main-menu navbar-expand-md navbar-light">
-                                </nav>
+                            <div class="nav-outer d-flex align-items-center">
+                                <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png" alt="Menu Navigasi"></div>
+                                <nav class="main-menu navbar-expand-md navbar-light"></nav>
+                                <div class="evev-header-actions">
+                                    <button type="button" class="theme-toggle-btn" aria-label="Ganti Tema Gelap atau Terang" title="Ganti Tema">
+                                        <i class="fas fa-moon" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div><!-- End Sticky Menu -->
 
-        <!-- Mobile Menu  -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="icon fal fa-times"></i></div>
-            
+
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="" title=""></a></div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-				<!--Social Links-->
-				<div class="social-links">
-					<ul class="clearfix">
-						<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-						<li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-						<li><a href="#"><span class="fab fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fab fa-youtube"></span></a></li>
-					</ul>
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler" title="evevtayler"></a></div>
+                <div class="menu-outer"></div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-wa-umum=""><span class="fab fa-whatsapp"></span></a></li>
+                    </ul>
                 </div>
             </nav>
         </div><!-- End Mobile Menu -->
@@ -176,17 +415,17 @@
     </header>
     <!-- End Main Header -->
 
-    <!--Search Popup-->
+    <!-- Search Popup -->
     <div id="search-popup" class="search-popup">
         <div class="close-search theme-btn"><i class="fal fa-times"></i></div>
         <div class="popup-inner">
             <div class="overlay-layer"></div>
             <div class="search-form">
-                <form action="#" onsubmit="event.preventDefault();">
+                <form action="#">
                     <div class="form-group">
                         <fieldset>
-                            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
-                            <input type="submit" value="Search Now!" class="theme-btn">
+                            <input type="search" class="form-control" name="search-input" value="" placeholder="Cari layanan: potong celana, resleting YKK, gamis..." required>
+                            <input type="submit" value="Cek Tarif via WA" class="theme-btn">
                         </fieldset>
                     </div>
                 </form>
@@ -194,35 +433,35 @@
         </div>
     </div>
 
-    <!-- Bnner Section -->
+    <!-- Banner Section -->
     <section class="banner-section style-two">
         <div class="swiper-container banner-slider">
             <div class="swiper-wrapper">
-                <!-- Slide Item -->
+                <!-- Slide 1 -->
                 <div class="swiper-slide" style="background-image: url(assets/images/evevtayler/hero_workshop_tailor.webp);">
                     <div class="content-outer">
                         <div class="content-box text-center justify-content-center">
                             <div class="inner">
-                                <h4>Welcome to evevtayler</h4>
-                                <h1>Create your <br> own Personal Style</h1>
+                                <h4>Workshop Vermak Express &amp; Jahit Profesional — Jakarta Timur</h4>
+                                <h1>Vermak Pakaian Kilat <br> 15–30 Menit Bisa Ditunggu</h1>
                                 <div class="link-box">
-                                    <a href="#layanan" class="theme-btn btn-style-one"><span>discover more</span></a>
+                                    <a href="#daftar-harga" class="theme-btn btn-style-one"><span>Lihat Daftar Tarif</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Slide Item -->
+                <!-- Slide 2 -->
                 <div class="swiper-slide" style="background-image: url(assets/images/evevtayler/portfolio_hasil_vermak_rapi.webp);">
                     <div class="content-outer">
                         <div class="content-box text-center justify-content-center">
                             <div class="inner">
-                                <h4>Welcome to evevtayler</h4>
-                                <h1>our Personal <br>  Quality evevtayler</h1>
+                                <h4>Garansi Pas di Badan &amp; Keliman Original Jeans</h4>
+                                <h1>Jahitan Halus Presisi <br> Standar Tailor Butik</h1>
                                 <div class="link-box">
-                                    <a href="#layanan" class="theme-btn btn-style-one"><span>discover more</span></a>
+                                    <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" class="theme-btn btn-style-one" data-wa-umum="Halo evevtayler, saya ingin booking antrean vermak pakaian hari ini."><span>Booking via WhatsApp</span></a>
                                 </div>
-                            </div>       
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,170 +469,317 @@
         </div>
         <div class="banner-slider-nav">
             <div class="banner-slider-control banner-slider-button-prev"><span><i class="fas fa-arrow-right"></i></span></div>
-            <div class="banner-slider-control banner-slider-button-next"><span><i class="fas fa-arrow-right"></i></span> </div>
+            <div class="banner-slider-control banner-slider-button-next"><span><i class="fas fa-arrow-right"></i></span></div>
         </div>
     </section>
-    <!-- End Bnner Section -->
+    <!-- End Banner Section -->
 
-    <!-- Features section -->
+    <!-- Features Section -->
     <section class="features-section">
         <div class="auto-container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_gunting_meteran.webp" alt=""></div>
-                        <h4 class="feature-block_title">Bisa Ditunggu Langsung</h4>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_gunting_meteran.webp" alt="Vermak Kilat 15 sampai 30 Menit Bisa Ditunggu" loading="lazy"></div>
+                        <h4 class="feature-block_title">Bisa Ditunggu 15–30 Menit</h4>
                         <div class="feature-block_hover-content">
-                            <h4 class="feature-block_title">Bisa Ditunggu Langsung</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <h4 class="feature-block_title">Bisa Ditunggu 15–30 Menit</h4>
+                            <div class="feature-block_text">Potong celana jeans, kecilkan pinggang, dan ganti resleting YKK langsung selesai di tempat tanpa perlu bolak-balik.</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_jarum_benang.webp" alt=""></div>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_jarum_benang.webp" alt="Presisi Ukur Badan dan Garansi Pas" loading="lazy"></div>
                         <h4 class="feature-block_title">Presisi Ukur Badan</h4>
                         <div class="feature-block_hover-content">
                             <h4 class="feature-block_title">Presisi Ukur Badan</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <div class="feature-block_text">Tersedia ruang fitting nyaman di workshop agar setiap potongan jatuh pas, rapi, dan nyaman dipakai beraktivitas.</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_mesin_jahit.webp" alt=""></div>
-                        <h4 class="feature-block_title">Kevin in Media</h4>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_mesin_jahit.webp" alt="Mesin Jahit Industri dan Keliman Original Jeans" loading="lazy"></div>
+                        <h4 class="feature-block_title">Hasil Rapi Standar Butik</h4>
                         <div class="feature-block_hover-content">
-                            <h4 class="feature-block_title">Kevin in Media</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <h4 class="feature-block_title">Hasil Rapi Standar Butik</h4>
+                            <div class="feature-block_text">Menggunakan mesin jahit high-speed, obras 4 benang, dan benang serasi agar sambungan keliman asli tetap mulus.</div>
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
     </section>
 
-    <!-- Introduction -->
+    <!-- Introduction / Tentang Kami -->
     <section id="tentang" class="introduction-section">
         <div class="auto-container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="introduction-block_image">
                         <div class="img_hover_3">
-                            <img src="assets/images/evevtayler/portfolio_meja_pola_desain.webp" alt="">
+                            <img src="assets/images/evevtayler/portfolio_meja_pola_desain.webp" alt="Meja Pola dan Pengukuran Pakaian Workshop evevtayler" loading="lazy" style="width:100%; height:460px; object-fit:cover;">
                         </div>
                         <div class="introduction-block_content" data-parallax='{"y": 30}'>
-                            <div class="introduction-block_text-two">Trusted and Professional <br> evevtayler in Town</div>
-                            <a class="introduction-block_link-btn-two" href="#tentang">Get Started</a>
+                            <div class="introduction-block_text-two">Workshop Penjahit &amp; <br> Vermak Terpercaya di Jakarta</div>
+                            <a class="introduction-block_link-btn-two" href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya ingin konsultasi vermak atau jahit pakaian.">Chat Admin WA</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="introduction-block">
-                        <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                        <div class="sub-title">Our Introduction </div>
-                        <div class="sec-title">Our evevtayler Ready to <br> nStich your Clothes</div>
-                        <div class="introduction-block_text">evevtayler berpengalaman belasan tahun dalam pembuatan dan permak pakaian pria maupun wanita dengan standar jahitan halus dan bergaransi.unc dictum.</div>
+                        <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Dekorasi judul" loading="lazy"></div>
+                        <div class="sub-title">Tentang evevtayler</div>
+                        <div class="sec-title">Pakaian Baru Kepanjangan <br> atau Kebesaran? Beres Seketika!</div>
+                        <div class="introduction-block_text">Baru beli celana jeans, kemeja kerja, atau gamis online tapi ukurannya kurang pas? <strong>evevtayler</strong> hadir di Jl. Otista Raya, Jatinegara dengan tim penjahit berpengalaman lebih dari 12 tahun. Kami menyulap pakaian kedodoran menjadi pas di badan dengan jahitan halus standar butik dan waktu pengerjaan super cepat.</div>
                         <ul class="introduction-block_list">
-                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt=""></i>Suspe ndisse suscipit sagittis leo.</li>
-                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt=""></i>Garansi pas di badan &amp; gratis vermak ulang bila kurang pas.</li>
+                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt="Centang" loading="lazy"></i>Buka setiap hari pukul 08.00 – 21.00 WIB, siap melayani vermak mendadak sebelum acara.</li>
+                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt="Centang" loading="lazy"></i>Garansi pas di badan &amp; gratis revisi ulang selama 7 hari bila masih terasa kurang pas.</li>
                         </ul>
-                        <div class="row">
+                        <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="introduction-block_contact-info">
-                                    <div class="introduction-block_phone-title">Call Anytime</div>
-                                    <div class="introduction-block-phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                                    <div class="introduction-block_phone-title">Hotline &amp; WhatsApp</div>
+                                    <div class="introduction-block-phone"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="introduction-block_link-btn"><a href="#tentang" class="theme-btn btn-style-one">discover more</a></div>
+                                <div class="introduction-block_link-btn"><a href="#daftar-harga" class="theme-btn btn-style-one">Cek Daftar Tarif</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
     </section>
 
-    <!-- Layanan Jahit Offer -->
+    <!-- Layanan Vermak Unggulan -->
     <section id="layanan" class="service-offer-section">
         <div class="auto-container">
-            <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Checkout our services</div>
-                <div class="sec-title">Layanan Jahit We Offer</div>
+            <div class="text-center mb-5">
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Dekorasi layanan" loading="lazy"></div>
+                <div class="sub-title">Layanan Vermak Kilat Unggulan</div>
+                <div class="sec-title">Cepat, Rapi &amp; Transparan Harganya</div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_vermak_express.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Potong Celana Jeans &amp; Bahan (Rp 15.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_vermak_express.webp" alt="Potong Celana Jeans dan Bahan Express" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Potong Celana Jeans &amp; Bahan</h4>
+                        <div class="service-block-three_text">Pengerjaan 15–30 menit bisa ditunggu. Tersedia teknik sambung keliman asli (original hem) agar tampilan bawaan pabrik pada ujung jeans tetap utuh.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 15.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Potong%20Celana%20Jeans%20%26%20Bahan%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2015.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%2015%20-%2030%20Menit%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Potong Celana Jeans & Bahan" data-wa-harga="Rp 15.000" data-wa-estimasi="15 - 30 Menit"><i class="fab fa-whatsapp"></i> Booking WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_hasil_vermak_rapi.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Kecilkan Pinggang &amp; Paha (Rp 25.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_hasil_vermak_rapi.webp" alt="Kecilkan Pinggang Paha dan Slim Fit Celana" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Kecilkan Pinggang, Paha &amp; Kaki</h4>
+                        <div class="service-block-three_text">Atasi celana kebesaran di pinggang atau ubah potongan regular menjadi slim fit/tapered yang modern tanpa merusak bentuk kantong dan pola celana.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 25.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Kecilkan%20Pinggang%2C%20Paha%20%26%20Kaki%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2025.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%2030%20-%2045%20Menit%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Kecilkan Pinggang, Paha & Kaki" data-wa-harga="Rp 25.000" data-wa-estimasi="30 - 45 Menit"><i class="fab fa-whatsapp"></i> Booking WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Ganti Resleting YKK Celana/Jaket (Rp 20.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt="Ganti Resleting YKK Original Celana dan Jaket" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Ganti Resleting YKK Celana &amp; Jaket</h4>
+                        <div class="service-block-three_text">Ganti resleting jebol atau macet dengan resleting YKK original (besi maupun vislon/jepang) lengkap dengan jahitan pengunci ekstra kuat.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 20.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Ganti%20Resleting%20YKK%20Celana%20%26%20Jaket%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2020.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%2020%20-%2030%20Menit%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Ganti Resleting YKK Celana & Jaket" data-wa-harga="Rp 20.000" data-wa-estimasi="20 - 30 Menit"><i class="fab fa-whatsapp"></i> Booking WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_baju_muslim_gamis.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Permak Baju Gamis &amp; Dress (Rp 35.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_baju_muslim_gamis.webp" alt="Permak Baju Gamis Dress Pesta dan Kemeja" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Permak Gamis, Dress &amp; Kemeja</h4>
+                        <div class="service-block-three_text">Potong bawah gamis berpayet/brokat, rapikan bahu kemeja kerja, hingga kecilkan lingkar dada dan lengan dengan jahitan halus tak terlihat.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 35.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Permak%20Gamis%2C%20Dress%20%26%20Kemeja%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2035.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%201%20Hari%20/%20Express%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Permak Gamis, Dress & Kemeja" data-wa-harga="Rp 35.000" data-wa-estimasi="1 Hari / Express"><i class="fab fa-whatsapp"></i> Booking WA</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video -->
-    <section class="video-section">
-        <div class="video-section_bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/evevtayler/hero_workshop_tailor.webp)"></div>
+    <!-- Daftar Tarif Lengkap 6 Paket (Terhubung dengan PROFIL_USAHA.layanan) -->
+    <section id="daftar-harga" class="evev-tarif-section">
         <div class="auto-container">
-            <div class="row">
-                <div class="video-btn"><a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="overlay-link play-now ripple" data-fancybox="gallery" data-caption=""><i class="fas fa-play"></i></a></div>
-                <h4 class="video-block_title">You Can Depend on Our <br> evevtayler to Get a Quality Dresses</h4>
+            <div class="text-center mb-5">
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Daftar Tarif Transparan evevtayler" loading="lazy"></div>
+                <div class="sub-title">Daftar Tarif Lengkap &amp; Estimasi Waktu</div>
+                <div class="sec-title">Pilih Layanan Sesuai Kebutuhan Anda</div>
+            </div>
+            <div class="row" id="daftar-tarif-evevtayler">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge">Bisa Ditunggu</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 15 – 30 Menit</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Potong Celana Jeans & Bahan</h4>
+                        <p class="evev-tarif-card__desc">Potong panjang celana jeans (tetap pertahankan keliman asli/chain stitch) maupun celana bahan kantor dengan hasil super rapi.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Estimasi Tarif</span>
+                                <div class="evev-tarif-card__price">Rp 15.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Potong%20Celana%20Jeans%20%26%20Bahan%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2015.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%2015%20%E2%80%93%2030%20Menit%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Potong Celana Jeans & Bahan" data-wa-harga="Rp 15.000" data-wa-estimasi="15 – 30 Menit">
+                                <i class="fab fa-whatsapp"></i> Pesan WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge">Paling Laris</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 30 – 45 Menit</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Kecilkan Pinggang, Paha & Kaki</h4>
+                        <p class="evev-tarif-card__desc">Sesuaikan ukuran pinggang longgar atau ubah potongan menjadi slim fit agar celana dan rok jatuh proporsional saat dipakai.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Estimasi Tarif</span>
+                                <div class="evev-tarif-card__price">Rp 25.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Kecilkan%20Pinggang%2C%20Paha%20%26%20Kaki%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2025.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%2030%20%E2%80%93%2045%20Menit%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Kecilkan Pinggang, Paha & Kaki" data-wa-harga="Rp 25.000" data-wa-estimasi="30 – 45 Menit">
+                                <i class="fab fa-whatsapp"></i> Pesan WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge">Original YKK</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 20 – 30 Menit</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Ganti Resleting YKK Celana & Jaket</h4>
+                        <p class="evev-tarif-card__desc">Penggantian resleting macet atau rusak menggunakan kepala & rel YKK asli yang kuat dan tidak mudah selip.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Estimasi Tarif</span>
+                                <div class="evev-tarif-card__price">Rp 20.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Ganti%20Resleting%20YKK%20Celana%20%26%20Jaket%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2020.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%2020%20%E2%80%93%2030%20Menit%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Ganti Resleting YKK Celana & Jaket" data-wa-harga="Rp 20.000" data-wa-estimasi="20 – 30 Menit">
+                                <i class="fab fa-whatsapp"></i> Pesan WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge">Jahitan Halus</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 1 Hari / Express</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Permak Gamis, Dress & Kemeja</h4>
+                        <p class="evev-tarif-card__desc">Potong bawah, kecilkan lingkar dada/lengan, atau rapikan bahu untuk gamis brukat, dress pesta, kemeja kerja, dan batik lapis furing.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Estimasi Tarif</span>
+                                <div class="evev-tarif-card__price">Rp 35.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Permak%20Gamis%2C%20Dress%20%26%20Kemeja%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%2035.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%201%20Hari%20/%20Express%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Permak Gamis, Dress & Kemeja" data-wa-harga="Rp 35.000" data-wa-estimasi="1 Hari / Express">
+                                <i class="fab fa-whatsapp"></i> Pesan WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge">Bespoke Fit</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 4 – 7 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Jahit Kustom Jas Pria & Kebaya Modern</h4>
+                        <p class="evev-tarif-card__desc">Pembuatan pola khusus sesuai ukuran tubuh untuk jas pengantin, blazer eksekutif, kebaya wisuda, dan gaun pesta termasuk sesi fitting.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Estimasi Tarif</span>
+                                <div class="evev-tarif-card__price">Mulai Rp 350.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Jahit%20Kustom%20Jas%20Pria%20%26%20Kebaya%20Modern%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Mulai%20Rp%20350.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%204%20%E2%80%93%207%20Hari%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Jahit Kustom Jas Pria & Kebaya Modern" data-wa-harga="Mulai Rp 350.000" data-wa-estimasi="4 – 7 Hari">
+                                <i class="fab fa-whatsapp"></i> Pesan WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge">Harga Grosir</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 7 – 14 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Konveksi Seragam Kantor & Komunitas</h4>
+                        <p class="evev-tarif-card__desc">Produksi kemeja PDH/PDL, polo shirt bordir komputer, jaket bomber, dan wearpack safety minimal 12 pcs dengan bahan Drill/Lacoste pilihan.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Estimasi Tarif</span>
+                                <div class="evev-tarif-card__price">Mulai Rp 75.000/pcs</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20/%20booking%20layanan%20jahit%20%26%20vermak%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Konveksi%20Seragam%20Kantor%20%26%20Komunitas%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Mulai%20Rp%2075.000/pcs%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%207%20%E2%80%93%2014%20Hari%0A%E2%80%A2%20Jumlah%20Pakaian%20%3A%201%20pcs%0A%E2%80%A2%20Rencana%20Datang%20/%20Jemput%20%3A%20%0A%0AMohon%20info%20antrean%20workshop%20hari%20ini%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Konveksi Seragam Kantor & Komunitas" data-wa-harga="Mulai Rp 75.000/pcs" data-wa-estimasi="7 – 14 Hari">
+                                <i class="fab fa-whatsapp"></i> Pesan WA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video / Banner Highlight -->
+    <section class="video-section">
+        <div class="video-section_bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/evevtayler/hero_workshop_tailor.webp);"></div>
+        <div class="auto-container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h4 class="video-block_title">Butuh Permak Mendadak Sebelum Acara? <br> Langsung Bawa ke Workshop evevtayler!</h4>
+                    <div class="mt-4">
+                        <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" class="theme-btn btn-style-one" data-wa-umum="Halo evevtayler, saya butuh vermak express hari ini. Apakah bisa langsung datang?"><span>Tanya Antrean Hari Ini via WA</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Portofolio Karya -->
     <section id="galeri" class="gallery-section">
-        <div class="auto-continer">
+        <div class="auto-container">
             <div class="row row-3">
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-17.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/portfolio_hasil_vermak_rapi.webp" alt="Hasil Vermak Celana Jeans dan Bahan Rapi" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-17.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/portfolio_hasil_vermak_rapi.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Hasil Vermak Rapi"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -401,11 +787,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-18.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt="Detail Jahitan Halus dan Resleting YKK" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-18.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/portfolio_detail_jahitan.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Detail Jahitan"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -413,11 +799,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-19.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/service_baju_muslim_gamis.webp" alt="Permak Gamis dan Dress Brukat Halus" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-19.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/service_baju_muslim_gamis.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Permak Gamis"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -425,11 +811,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-20.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/portfolio_meja_pola_desain.webp" alt="Proses Pengukuran dan Pembuatan Pola Pakaian" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-20.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/portfolio_meja_pola_desain.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Meja Pola Workshop"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -439,115 +825,112 @@
         </div>
     </section>
 
-    <!-- Our testimonials -->
-    <section class="our-testimonials-section-two">
+    <!-- Testimoni Pelanggan -->
+    <section id="testimoni" class="our-testimonials-section-two">
         <div class="auto-container">
             <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Our testimonials </div>
-                <div class="sec-title">What They’re Saying</div>
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Ulasan Pelanggan evevtayler" loading="lazy"></div>
+                <div class="sub-title">Ulasan Pelanggan Setia</div>
+                <div class="sec-title">Kata Mereka yang Sudah Mencoba</div>
             </div>
             <div class="theme_carousel owl-theme owl-carousel owl-style-one" data-options='{"loop": true, "center": false, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "480" :{ "items" : "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "3" }}}'>
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-6.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-6.png" alt="Testimoni Budi Santoso" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Potong 2 celana jeans dengan keliman sambung asli cuma 25 menit langsung kelar! Hasilnya nggak kelihatan habis dipotong, persis kayak bawaan toko. Harga juga ramah banget."</div>
                     <div class="testimonial-block-two_name">Budi Santoso</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_dasignation">Karyawan Swasta — Jatinegara</div>
                 </div>
 
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-7.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-7.png" alt="Testimoni Annisa Rahma" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Sering belanja gamis online yang kepanjangan, selalu bawa ke evevtayler. Jahitan obrasnya rapi, brukatnya nggak ada yang rusak, dan bisa konsultasi dulu via WA sebelum datang."</div>
                     <div class="testimonial-block-two_name">Annisa Rahma</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_dasignation">Pelanggan Setia — Rawamangun</div>
                 </div>
 
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-8.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-8.png" alt="Testimoni Hendro Wijaya" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Resleting jaket touring saya rusak padahal mau dipakai besok pagi. Di evevtayler diganti YKK asli cuma 20 menit, tarikan enteng dan jahitannya presisi banget. Recommended!"</div>
                     <div class="testimonial-block-two_name">Hendro Wijaya</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_dasignation">Wiraswasta — Tebet</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Fun facts -->
+    <!-- Pencapaian & Statistik -->
     <section class="fun-facts-section-two">
         <div class="fun-facts-section-two-bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/background/bg-4.jpg);"></div>
         <div class="auto-container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                    <div class="sub-title">Fun facts</div>
-                    <div class="sec-title mb-30">Our Numbers Speaks <br> About Everything</div>
-                    <div class="fun-facts-section-two_description">There are many variations of passages of available but the not the majority have suffered alteration in form,simply free text by injected is randomised words which. </div>
+                    <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Statistik Workshop evevtayler" loading="lazy"></div>
+                    <div class="sub-title">Bukti Kualitas Kami</div>
+                    <div class="sec-title mb-30">Ribuan Pakaian Kembali <br> Nyaman Dipakai</div>
+                    <div class="fun-facts-section-two_description">Setiap jahitan dikerjakan dengan ketelitian tinggi oleh tim penjahit berpengalaman agar pakaian kesayangan Anda awet, pas di tubuh, dan tampil seperti baru.</div>
 
                     <div class="progress-levels mb-30">
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Potong Celana Jadi</h5>
+                            <h5>Ketepatan Waktu Vermak Express</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="88"><div class="percent"></div></div></div>
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="98"><div class="percent"></div></div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Penjahit Berpengalaman</h5>
+                            <h5>Kerapian Jahitan &amp; Keliman Asli</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="65"><div class="percent"></div></div></div>
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="99"><div class="percent"></div></div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Tahun Dedikasi</h5>
+                            <h5>Kepuasan &amp; Repeat Order Pelanggan</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="75"><div class="percent"></div></div></div>
-                                </div>                                
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="96"><div class="percent"></div></div></div>
+                                </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="col-lg-6 mb-30">
                     <div class="row no-gutters">
                         <div class="col-md-6">
-                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/resource/image-6.jpg);">
+                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/evevtayler/service_vermak_express.webp);">
                                 <div class="content-middle">
                                     <div class="funfacts-block_icon"><i class="flaticon-suit"></i></div>
-                                    <h4 class="funfacts-block_title">Kepuasan Garansi</h4>
+                                    <h4 class="funfacts-block_title">Garansi Pas 7 Hari</h4>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="funfacts-block mb-0 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="content-middle">
                                     <div class="count-outer count-box funfacts-block_number">
-                                        <span class="count-text" data-speed="3000" data-stop="8800">0</span>
+                                        <span class="count-text" data-speed="3000" data-stop="9500">0</span><span class="plus">+</span>
                                     </div>
-                                    <h4 class="funfacts-block_title">Dresses Stitched</h4>
+                                    <h4 class="funfacts-block_title">Pakaian Selesai Divermak</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 order-md-4">
-                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/resource/image-7.jpg);">
+                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/evevtayler/portfolio_detail_jahitan.webp);">
                                 <div class="content-middle">
                                     <div class="funfacts-block_icon"><i class="flaticon-measuring"></i></div>
-                                    <h4 class="funfacts-block_title">Body Measure</h4>
+                                    <h4 class="funfacts-block_title">Fitting Ukur Akurat</h4>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="funfacts-block mb-0 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="content-middle">
                                     <div class="count-outer count-box funfacts-block_number">
-                                        <span class="count-text" data-speed="3000" data-stop="24">0</span><span class="plus">+</span>
+                                        <span class="count-text" data-speed="3000" data-stop="12">0</span><span class="plus">+</span>
                                     </div>
-                                    <h4 class="funfacts-block_title">Expert evevtayler</h4>
+                                    <h4 class="funfacts-block_title">Tahun Pengalaman Tailor</h4>
                                 </div>
                             </div>
                         </div>
@@ -557,81 +940,81 @@
         </div>
     </section>
 
-    <!-- Our Benefits -->
+    <!-- Keunggulan Kami -->
     <section class="benefits-section">
         <div class="auto-container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                    <div class="sub-title light">Our Benefits</div>
-                    <div class="sec-title light mb-30">Why You Should <br> Choose us?</div>
-                    <div class="benefits-section_description">There are many variations of passages of Lorem <br> Ipsum available, but the majority have suffered <br> alteration in some form. </div>
+                    <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Keunggulan evevtayler" loading="lazy"></div>
+                    <div class="sub-title light">Keunggulan Workshop</div>
+                    <div class="sec-title light mb-30">Kenapa Harus Vermak <br> di evevtayler?</div>
+                    <div class="benefits-section_description">Kami menggabungkan kecepatan pengerjaan express dengan ketelitian tailor butik—tanpa tarif tersembunyi dan hasil selalu dicek sebelum diserahkan.</div>
                     <ul class="benefits-section_list">
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Urgent wedding dresses solutions.</li>
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Top quality services with reasonable price</li>
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Reliable & experienced evevtaylers</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 1" loading="lazy">Bisa ditunggu 15–30 menit untuk potong celana &amp; ganti resleting.</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 2" loading="lazy">Tarif jelas di awal mulai Rp 15.000 dengan benang &amp; aksesoris berkualitas.</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 3" loading="lazy">Penjahit spesialis jeans, gamis brukat, kemeja, hingga jas &amp; kebaya.</li>
                     </ul>
                 </div>
-               <div class="col-lg-6">
-                   <div class="benefits-section_image">
-                       <img src="assets/images/resource/image-24.jpg" alt="">
-                       <div class="benefits-section_icon-box">
-                           <div class="benefits-section_icon"><i class="flaticon-knitting"></i></div>
-                           <div class="benefits-section_text">Style <br> According <br> To Your Way</div>
-                       </div>
+                <div class="col-lg-6">
+                    <div class="benefits-section_image">
+                        <img src="assets/images/evevtayler/hero_workshop_tailor.webp" alt="Suasana Workshop Jahit dan Vermak evevtayler" loading="lazy">
+                        <div class="benefits-section_icon-box">
+                            <div class="benefits-section_icon"><i class="flaticon-knitting"></i></div>
+                            <div class="benefits-section_text">Pas di Badan <br> Rapi &amp; Siap <br> Pakai Cepat</div>
+                        </div>
                     </div>
-               </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- Tips & Artikel Busana -->
     <section id="blog" class="news-section-two">
         <div class="auto-container">
             <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Latest Blog Posts</div>
-                <h2 class="sec-title">News & Articles</h2>
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Tips Busana dan Perawatan Pakaian" loading="lazy"></div>
+                <div class="sub-title">Tips &amp; Panduan Busana</div>
+                <h2 class="sec-title">Inspirasi &amp; Rawat Pakaian Anda</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-1.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/service_vermak_express.webp" alt="Cara Memilih Teknik Potong Sambung Asli pada Celana Jeans" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">10 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Tim evevtayler</span> <i class="fal fa-tag"></i> <span>Tips Jeans</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya mau potong celana jeans dengan teknik keliman asli.">Mengenal Teknik Potong Sambung Asli Agar Ujung Jeans Tetap Seperti Baru</a></h4>
+                                <div class="news-block-one_text">Jangan asal potong celana denim favorit Anda—ketahui rahasia mempertahankan lipatan roping asli pabrikan.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, saya mau potong celana jeans dengan teknik keliman asli.">Tanya Penjahit WA</a></div>
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-2.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt="Tanda Resleting Perlu Diganti dengan YKK Original" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">16 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Tim evevtayler</span> <i class="fal fa-tag"></i> <span>Perawatan</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya ingin ganti resleting YKK untuk celana/jaket.">Resleting Celana atau Jaket Sering Macet? Ini Keunggulan YKK Original</a></h4>
+                                <div class="news-block-one_text">Mengganti resleting jauh lebih hemat daripada membeli jaket atau celana baru, sekaligus memperpanjang usia pakai.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, saya ingin ganti resleting YKK untuk celana/jaket.">Ganti Resleting WA</a></div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-3.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/service_baju_muslim_gamis.webp" alt="Tips Permak Gamis dan Dress Pesta Agar Tetap Jatuh Elegan" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">22 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>                                        
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Tim evevtayler</span> <i class="fal fa-tag"></i> <span>Gamis &amp; Dress</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya mau permak gamis/dress agar pas di badan.">Cara Mengukur Panjang Gamis &amp; Dress Pesta Sebelum Dibawa ke Penjahit</a></h4>
+                                <div class="news-block-one_text">Bawa sepatu atau heels yang akan dipakai saat fitting agar panjang keliman gamis dan dress jatuh sempurna.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, saya mau permak gamis/dress agar pas di badan.">Konsultasi Permak WA</a></div>
                             </div>
                         </div>
                     </div>
@@ -640,89 +1023,62 @@
         </div>
     </section>
 
-    <!-- Client Logo -->
-    <section class="client-logo style-two">
-        <div class="auto-container">
-            <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "center": false, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "480" :{ "items" : "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "3" } , "992":{ "items" : "4" }, "1200":{ "items" : "5" }}}'>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+    <!-- Footer -->
     <footer id="kontak" class="main-footer" style="background-image: url(assets/images/background/bg-6.jpg);">
         <div class="auto-container">
-            <!--Widgets Section-->
             <div class="widgets-section">
                 <div class="row">
-                    
-                    <!--Column-->
                     <div class="column col-lg-5 col-md-12">
                         <div class="widget about-widget">
-                            <div class="about-widget_text">
-                                Pusat jasa jahit busana, vermak kilat pakaian harian &amp; konveksi seragam terpercaya di Jakarta Timur.
+                            <div class="about-widget_text" data-config="tagline">
+                                Vermak Kilat 15–30 Menit, Jahit Jas &amp; Kebaya Bespoke, hingga Konveksi Seragam Bergaransi.
                             </div>
-                            <div class="about-widget_phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                            <div class="about-widget_phone"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                             <ul class="about-widget_social-links">
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-wa-umum=""><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!--Column-->
                     <div class="column col-lg-7 col-md-12">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-5">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Layanan Jahit</h4>
+                                    <h4 class="widget-title">Layanan Vermak &amp; Jahit</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#layanan">Outerwear</a></li>
-                                            <li><a href="#layanan">Potong Celana Jeans &amp; Bahan (Rp 15.000)</a></li>
-                                            <li><a href="#layanan">Ganti Resleting YKK Celana/Jaket (Rp 20.000)</a></li>
-                                            <li><a href="#layanan">Permak Baju Gamis &amp; Dress (Rp 35.000)</a></li>
-                                        </ul>                                        
+                                            <li><a href="#daftar-harga">Potong Celana Jeans &amp; Bahan (Rp 15.000)</a></li>
+                                            <li><a href="#daftar-harga">Kecilkan Pinggang &amp; Paha (Rp 25.000)</a></li>
+                                            <li><a href="#daftar-harga">Ganti Resleting YKK (Rp 20.000)</a></li>
+                                            <li><a href="#daftar-harga">Permak Gamis &amp; Dress (Rp 35.000)</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Links</h4>
+                                    <h4 class="widget-title">Navigasi Cepat</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#tentang">About</a></li>
-                                            <li><a href="#tentang">Meet the Team</a></li>
-                                            <li><a href="#galeri">Our Portofolio Karya</a></li>
-                                            <li><a href="#kontak">Contact</a></li>
-                                        </ul>                    
+                                            <li><a href="#tentang">Tentang Workshop</a></li>
+                                            <li><a href="#daftar-harga">Daftar Tarif</a></li>
+                                            <li><a href="#galeri">Portofolio Hasil</a></li>
+                                            <li><a href="#testimoni">Testimoni Pelanggan</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Legal</h4>
+                                    <h4 class="widget-title">Varian Layanan</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#tentang">Help</a></li>
-                                            <li><a href="#tentang">Terms of Use</a></li>
-                                            <li><a href="#tentang">Privacy Policy</a></li>
-                                        </ul>                                        
+                                            <li><a href="template-1.html">Vermak Kilat</a></li>
+                                            <li><a href="template-2.html">Jas &amp; Kebaya</a></li>
+                                            <li><a href="template-3.html">Konveksi Seragam</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -730,32 +1086,46 @@
                         <div class="footer-border-bottom mb-40"></div>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="contact-widget_address-title">Alamat Workshop Kami</div>
-                                <div class="contact-widget_address mb-40"> Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur</div>
+                                <div class="contact-widget_address-title">Alamat Workshop &amp; Jam Buka</div>
+                                <div class="contact-widget_address mb-2" data-config="alamat">Jl. Otista Raya No. 88, Bidara Cina, Jatinegara, Jakarta Timur 13330</div>
+                                <div class="contact-widget_address mb-40" data-config="jamOperasional">Buka Setiap Hari: 08.00 – 21.00 WIB</div>
                             </div>
                             <div class="col-md-6">
-                                <div class="contact-widget_mail-title">Email &amp; Konsultasi</div>
-                                <div class="contact-widget_mail mb-40"><a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a></div>
+                                <div class="contact-widget_mail-title">Email &amp; Konsultasi Cepat</div>
+                                <div class="contact-widget_mail mb-2"><a href="mailto:kontak@evevdigital.com" data-config="email">kontak@evevdigital.com</a></div>
+                                <div class="contact-widget_mail mb-40"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="auto-container">
-                <div class="copyright">&copy; 2026 evevtayler (EvEvDigital). Seluruh Hak Cipta Dilindungi.</div>
+                <div class="copyright">&copy; 2026 <strong>evevtayler</strong>. Seluruh Hak Cipta Dilindungi. Ditenagai oleh <strong>EvEvDigital</strong>.</div>
             </div>
         </div>
     </footer>
-	
+
 </div>
 <!--End pagewrapper-->
 
 <!--Scroll to top-->
-<div class="scroll-to-top"><a href="#" class="back-to-top " data-wow-duration="1.0s " data-wow-delay="1.0s "><i class="fa fa-angle-up "></i></a></div>
+<div class="scroll-to-top"><a href="#" class="back-to-top" aria-label="Kembali ke atas"><i class="fa fa-angle-up"></i></a></div>
+
+<!-- Floating Template Switcher Bar -->
+<div id="evev-template-switcher" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 99998; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif;">
+    <span style="color: #F59E0B; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 0 6px;">PILIH TEMPLATE:</span>
+    <a href="template-1.html" class="switcher-pill active" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: #B45309; color: #FFFFFF;">1. Vermak Kilat</a>
+    <a href="template-2.html" class="switcher-pill" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #F1F5F9;">2. Jas &amp; Kebaya Bespoke</a>
+    <a href="template-3.html" class="switcher-pill" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #F1F5F9;">3. Konveksi Seragam</a>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/62895323418658?text=Halo%20evevtayler%2C%20saya%20ingin%20konsultasi%20layanan%20vermak%20kilat%2015-30%20menit%20atau%20potong%20celana%20hari%20ini." class="floating-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Konsultasi Jahit dan Vermak via WhatsApp evevtayler" data-wa-umum="Halo evevtayler, saya ingin konsultasi layanan vermak kilat atau jahit pakaian.">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span>Konsultasi Jahit WA</span>
+</a>
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/popper.min.js"></script>
@@ -771,29 +1141,8 @@
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/jquery.ajaxchimp.min.js"></script>
 <script src="assets/js/parallax-scroll.js"></script>
-
 <script src="assets/js/script.js"></script>
-
-
-
-    <script src="assets/js/profil-usaha.js"></script>
-    <script src="assets/js/theme-toggle.js"></script>
-
-
-<!-- Floating Template Switcher Bar -->
-<div id="evev-template-switcher" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 99999; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif;">
-    <span style="color: #F59E0B; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 0 6px;">PILIH TEMPLATE:</span>
-    <a href="template-1.html" class="switcher-pill active" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: #D97706; color: #FFFFFF;">1. Vermak Kilat</a>
-    <a href="template-2.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">2. Jas &amp; Kebaya Bespoke</a>
-    <a href="template-3.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">3. Konveksi Seragam</a>
-</div>
-
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/62895323418658?text=Halo%20evevtayler,%20saya%20ingin%20konsultasi%20jahit%20atau%20vermak%20baju" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; z-index: 99999; background: #25D366; color: white; border-radius: 50px; padding: 12px 22px; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45); font-family: 'Plus Jakarta Sans', sans-serif; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    <i class="fab fa-whatsapp" style="font-size: 22px;"></i>
-    <span>Konsultasi Jahit WA</span>
-</a>
-
+<script src="assets/js/profil-usaha.js"></script>
+<script src="assets/js/theme-toggle.js"></script>
 </body>
 </html>

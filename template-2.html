@@ -1,31 +1,95 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
 <meta charset="utf-8">
-<title>evevtayler - Jahit Jas Pria Bespoke, Kebaya Wisuda Modern &amp; Gaun Pesta Pengantin Jakarta</title>
+<title>evevtayler | Jahit Jas Pria Bespoke, Kebaya Wisuda Modern &amp; Gaun Pesta Pengantin Jakarta</title>
+<meta name="description" content="evevtayler Bespoke melayani jahit jas pengantin pria 3-piece, blazer eksekutif, kebaya wisuda brokat payet, gaun pesta silk/velvet, dan batik lapis furing sanggit di Jakarta Timur dengan sesi private fitting dan garansi pas di badan.">
+
+<!-- Anti-FOUC Theme Initializer (Berjalan sebelum CSS dirender) -->
+<script>
+(function () {
+    var root = document.documentElement;
+    root.classList.add("theme-preload");
+    var theme = null;
+    try { theme = localStorage.getItem("evevdigital_theme_preference"); } catch (e) {}
+    if (theme !== "dark" && theme !== "light") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    root.setAttribute("data-theme", theme);
+    root.style.colorScheme = theme;
+})();
+</script>
+
 <!-- Stylesheets -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
-<!-- Responsive File -->
 <link href="assets/css/responsive.css" rel="stylesheet">
-<!-- Color File -->
 <link href="assets/css/color.css" rel="stylesheet">
+<link href="assets/css/theme-toggle.css" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/theme-toggle.css">
+<style>
+    /* Konsistensi object-fit: cover & simetri gambar Varian 2 Bespoke */
+    .feature-block_image img,
+    .introduction-block_image img,
+    .service-block-three_image img,
+    .gallery-block_image img,
+    .testimonial-block-two_image img,
+    .benefits-section_image img,
+    .news-block-one_image img {
+        object-fit: cover;
+    }
+    .feature-block_image img { width: 100%; height: 240px; }
+    .service-block-three_image img { width: 140px; height: 140px; border-radius: 50%; }
+    .gallery-block_image img { width: 100%; height: 290px; display: block; }
+    .news-block-one_image img { width: 100%; height: 240px; display: block; }
+    .testimonial-block-two_image img { width: 84px; height: 84px; border-radius: 50%; }
+    .benefits-section_image img { width: 100%; height: 420px; border-radius: 10px; }
+
+    .evev-header-actions {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 14px;
+    }
+    .service-block-three_title {
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px;
+    }
+    .service-block-three_text {
+        font-size: 14.5px !important;
+        line-height: 1.65 !important;
+        margin-bottom: 14px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        #evev-template-switcher {
+            bottom: 78px !important;
+            max-width: 94vw !important;
+            padding: 6px 10px !important;
+            gap: 5px !important;
+            overflow-x: auto;
+        }
+        #evev-template-switcher > span { display: none !important; }
+        #evev-template-switcher .switcher-pill {
+            padding: 7px 11px !important;
+            font-size: 11.5px !important;
+            white-space: nowrap;
+        }
+        .main-footer { padding-bottom: 135px !important; }
+    }
+</style>
 </head>
 
 <body>
@@ -42,21 +106,20 @@
                     <div class="left-column">
                         <div class="header-top-two_contact-info">
                             <div class="header-top-two_contact-info-icon"><i class="fal fa-envelope-open-text"></i></div>
-                            <div class="header-top-two_mail-title">Send Email</div>
-                            <div class="header-top-two-mail"><a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a></div>
+                            <div class="header-top-two_mail-title">Email Konsultasi</div>
+                            <div class="header-top-two-mail"><a href="mailto:kontak@evevdigital.com" data-config="email">kontak@evevdigital.com</a></div>
                         </div>
                     </div>
                     <div class="middle-column">
-                        <!--Logo-->
                         <div class="logo-box">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler Bespoke Jas dan Kebaya"></a></div>
                         </div>
                     </div>
                     <div class="right-column">
                         <div class="header-top-two_contact-info">
                             <div class="header-top-two_contact-info-icon"><i class="flaticon-phone-call"></i></div>
-                            <div class="header-top-two_phone-title">Call Anytime</div>
-                            <div class="header-top-two-phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                            <div class="header-top-two_phone-title">Booking Private Fitting</div>
+                            <div class="header-top-two-phone"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                         </div>
                     </div>
                 </div>
@@ -67,104 +130,91 @@
         <div class="header-upper">
             <div class="auto-container">
                 <div class="inner-container">
-                    <!--Logo-->
                     <div class="logo-box d-none">
-                        <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler"></a></div>
                     </div>
-                    <!--Nav Box-->
-                    <div class="nav-outer">
-                        <!--Mobile Navigation Toggler-->
-                        <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt=""></div>
+                    <div class="nav-outer d-flex align-items-center justify-content-between">
+                        <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt="Buka Menu Navigasi"></div>
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation">
-                                    <li class="dropdown"><a href="index.html">Home</a>
+                                    <li class="dropdown current"><a href="index.html">Pilih Desain</a>
                                         <ul>
-                                            <li><a href="index.html">Home Page 01</a></li>
-                                            <li><a href="index.html">Home Page 02</a></li>
+                                            <li><a href="template-1.html">Template 1: Vermak Kilat 15–30 Menit</a></li>
+                                            <li class="current"><a href="template-2.html">Template 2: Jas &amp; Kebaya Bespoke</a></li>
+                                            <li><a href="template-3.html">Template 3: Konveksi Seragam Kerja</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#tentang">About</a></li>                                       
-                                    <li class="dropdown"><a href="#">Layanan Jahit</a>
+                                    <li><a href="#tentang">Tentang Butik</a></li>
+                                    <li class="dropdown"><a href="#layanan">Layanan Bespoke</a>
                                         <ul>
-                                            <li><a href="#layanan">Our Layanan Jahit</a>
-                                            </li>
-                                            <li><a href="#layanan">Outerwear</a></li>
-                                            <li><a href="#layanan">Jas Pengantin Pria 3-Piece (Rp 650.000)</a></li>
+                                            <li><a href="#layanan">Koleksi Jahit Kustom</a></li>
+                                            <li><a href="#daftar-harga">Daftar Tarif Bespoke</a></li>
+                                            <li><a href="#layanan">Jas Pengantin 3-Piece (Rp 650.000)</a></li>
+                                            <li><a href="#layanan">Kebaya Wisuda Brokat (Rp 350.000)</a></li>
                                             <li><a href="#layanan">Gaun Malam Silk &amp; Velvet (Rp 450.000)</a></li>
-                                            <li><a href="#layanan">Batik Tulis Sutra Lapis Furing (Rp 200.000)</a></li>
-                                            <li><a href="#layanan">Kebaya Wisuda Modern Brokat (Rp 350.000)</a></li>
-                                            <li><a href="#layanan">Accessories</a></li>
+                                            <li><a href="#layanan">Batik Tulis Lapis Furing (Rp 200.000)</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">Pages</a>
-                                        <ul>
-                                            <li><a href="#tentang">evevtayler</a></li>
-                                            <li><a href="#galeri">Portofolio Karya</a></li>
-                                            <li><a href="#tentang">FAQ</a></li>
-                                            <li><a href="#">404 Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="#blog">Blog </a></li>
-                                            <li><a href="#blog">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#kontak">Contact</a></li>
+                                    <li><a href="#galeri">Portofolio</a></li>
+                                    <li><a href="#testimoni">Testimoni</a></li>
+                                    <li><a href="#blog">Panduan Gaya</a></li>
+                                    <li><a href="#kontak">Lokasi &amp; Kontak</a></li>
                                 </ul>
                             </div>
                         </nav>
+
+                        <div class="evev-header-actions">
+                            <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti Tema Gelap atau Terang" aria-pressed="false" title="Ganti ke Mode Gelap">
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Header Upper-->
+        <!-- End Header Upper -->
 
-        <!-- Sticky Header  -->
+        <!-- Sticky Header -->
         <div class="sticky-header">
             <div class="header-upper">
                 <div class="auto-container">
                     <div class="inner-container">
-                        <!--Logo-->
                         <div class="logo-box">
-                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler"></a></div>
                         </div>
                         <div class="right-column">
-                            <!--Nav Box-->
-                            <div class="nav-outer">
-                                <!--Mobile Navigation Toggler-->
-                                <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png" alt=""></div>
-    
-                                <!-- Main Menu -->
-                                <nav class="main-menu navbar-expand-md navbar-light">
-                                </nav>
+                            <div class="nav-outer d-flex align-items-center">
+                                <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png" alt="Menu Navigasi"></div>
+                                <nav class="main-menu navbar-expand-md navbar-light"></nav>
+                                <div class="evev-header-actions">
+                                    <button type="button" class="theme-toggle-btn" aria-label="Ganti Tema Gelap atau Terang" aria-pressed="false" title="Ganti Tema">
+                                        <i class="fas fa-moon" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div><!-- End Sticky Menu -->
 
-        <!-- Mobile Menu  -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="icon fal fa-times"></i></div>
-            
+
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="" title=""></a></div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-				<!--Social Links-->
-				<div class="social-links">
-					<ul class="clearfix">
-						<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-						<li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-						<li><a href="#"><span class="fab fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fab fa-youtube"></span></a></li>
-					</ul>
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-light.svg" alt="Logo evevtayler" title="evevtayler"></a></div>
+                <div class="menu-outer"></div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-wa-umum=""><span class="fab fa-whatsapp"></span></a></li>
+                    </ul>
                 </div>
             </nav>
         </div><!-- End Mobile Menu -->
@@ -176,17 +226,17 @@
     </header>
     <!-- End Main Header -->
 
-    <!--Search Popup-->
+    <!-- Search Popup -->
     <div id="search-popup" class="search-popup">
         <div class="close-search theme-btn"><i class="fal fa-times"></i></div>
         <div class="popup-inner">
             <div class="overlay-layer"></div>
             <div class="search-form">
-                <form action="#" onsubmit="event.preventDefault();">
+                <form action="#">
                     <div class="form-group">
                         <fieldset>
-                            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
-                            <input type="submit" value="Search Now!" class="theme-btn">
+                            <input type="search" class="form-control" name="search-input" value="" placeholder="Cari: jas pengantin, kebaya wisuda, gaun pesta, batik..." required>
+                            <input type="submit" value="Tanya Tarif via WA" class="theme-btn">
                         </fieldset>
                     </div>
                 </form>
@@ -194,35 +244,35 @@
         </div>
     </div>
 
-    <!-- Bnner Section -->
+    <!-- Banner Section -->
     <section class="banner-section style-two">
         <div class="swiper-container banner-slider">
             <div class="swiper-wrapper">
-                <!-- Slide Item -->
+                <!-- Slide 1 -->
                 <div class="swiper-slide" style="background-image: url(assets/images/evevtayler/hero_fitting_jas_kebaya.webp);">
                     <div class="content-outer">
                         <div class="content-box text-center justify-content-center">
                             <div class="inner">
-                                <h4>Welcome to evevtayler</h4>
-                                <h1>Create your <br> own Personal Style</h1>
+                                <h4>Rumah Jahit Bespoke Jas Pria, Kebaya &amp; Gaun Pesta</h4>
+                                <h1>Tampil Memukau dengan <br> Busana Jahitan Eksklusif</h1>
                                 <div class="link-box">
-                                    <a href="#layanan" class="theme-btn btn-style-one"><span>discover more</span></a>
+                                    <a href="#daftar-harga" class="theme-btn btn-style-one"><span>Lihat Daftar Tarif Bespoke</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Slide Item -->
+                <!-- Slide 2 -->
                 <div class="swiper-slide" style="background-image: url(assets/images/evevtayler/portfolio_koleksi_kain.webp);">
                     <div class="content-outer">
                         <div class="content-box text-center justify-content-center">
                             <div class="inner">
-                                <h4>Welcome to evevtayler</h4>
-                                <h1>our Personal <br>  Quality evevtayler</h1>
+                                <h4>Private Fitting, Pola Personal &amp; Garansi Sempurna</h4>
+                                <h1>Setiap Jahitan Dibuat <br> Khusus untuk Postur Anda</h1>
                                 <div class="link-box">
-                                    <a href="#layanan" class="theme-btn btn-style-one"><span>discover more</span></a>
+                                    <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" class="theme-btn btn-style-one" data-wa-umum="Halo evevtayler Bespoke, saya ingin booking sesi private fitting jas/kebaya."><span>Booking Private Fitting WA</span></a>
                                 </div>
-                            </div>       
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,170 +280,317 @@
         </div>
         <div class="banner-slider-nav">
             <div class="banner-slider-control banner-slider-button-prev"><span><i class="fas fa-arrow-right"></i></span></div>
-            <div class="banner-slider-control banner-slider-button-next"><span><i class="fas fa-arrow-right"></i></span> </div>
+            <div class="banner-slider-control banner-slider-button-next"><span><i class="fas fa-arrow-right"></i></span></div>
         </div>
     </section>
-    <!-- End Bnner Section -->
+    <!-- End Banner Section -->
 
-    <!-- Features section -->
+    <!-- Features Section -->
     <section class="features-section">
         <div class="auto-container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_manekin_butik.webp" alt=""></div>
-                        <h4 class="feature-block_title">Private Fitting Sesi</h4>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/icon_manekin_butik.webp" alt="Sesi Private Fitting Nyaman di Butik evevtayler" loading="lazy"></div>
+                        <h4 class="feature-block_title">Sesi Private Fitting</h4>
                         <div class="feature-block_hover-content">
-                            <h4 class="feature-block_title">Private Fitting Sesi</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <h4 class="feature-block_title">Sesi Private Fitting</h4>
+                            <div class="feature-block_text">Ukur badan 18 titik presisi langsung oleh master tailor plus hingga 2x sesi fitting sebelum serah terima.</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt=""></div>
-                        <h4 class="feature-block_title">Bahan Wol Premium</h4>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt="Koleksi Kain Wol Italia Brokat dan Sutra Premium" loading="lazy"></div>
+                        <h4 class="feature-block_title">Kain Wol &amp; Brokat Pilihan</h4>
                         <div class="feature-block_hover-content">
-                            <h4 class="feature-block_title">Bahan Wol Premium</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <h4 class="feature-block_title">Kain Wol &amp; Brokat Pilihan</h4>
+                            <div class="feature-block_text">Bisa bawa kain sendiri atau pilih langsung katalog wol semi-wool, brokat Prancis, satin silk &amp; furing adem di workshop.</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="feature-block">
-                        <div class="feature-block_image"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt=""></div>
-                        <h4 class="feature-block_title">Kevin in Media</h4>
+                        <div class="feature-block_image"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt="Finishing Jahitan Halus dan Payet Tangan Presisi" loading="lazy"></div>
+                        <h4 class="feature-block_title">Finishing Standar Butik</h4>
                         <div class="feature-block_hover-content">
-                            <h4 class="feature-block_title">Kevin in Media</h4>
-                            <div class="feature-block_text">Jahitan rapi, presisi &amp; standar tailor profesional</div>
+                            <h4 class="feature-block_title">Finishing Standar Butik</h4>
+                            <div class="feature-block_text">Konstruksi bahu jas tegap, kerah jatuh simetris, hingga jahitan kebaya dan payet tangan yang nyaman dipakai seharian.</div>
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
     </section>
 
-    <!-- Introduction -->
+    <!-- Introduction / Tentang Butik -->
     <section id="tentang" class="introduction-section">
         <div class="auto-container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="introduction-block_image">
                         <div class="img_hover_3">
-                            <img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt="">
+                            <img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt="Koleksi Kain Jas Wol dan Kebaya Eksklusif evevtayler" loading="lazy" style="width:100%; height:460px; object-fit:cover;">
                         </div>
                         <div class="introduction-block_content" data-parallax='{"y": 30}'>
-                            <div class="introduction-block_text-two">Trusted and Professional <br> evevtayler in Town</div>
-                            <a class="introduction-block_link-btn-two" href="#tentang">Get Started</a>
+                            <div class="introduction-block_text-two">Master Tailor Jas &amp; <br> Kebaya Modern Jakarta Timur</div>
+                            <a class="introduction-block_link-btn-two" href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya ingin konsultasi model jas/kebaya dan estimasi kebutuhan kain.">Konsultasi Model WA</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="introduction-block">
-                        <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                        <div class="sub-title">Our Introduction </div>
-                        <div class="sec-title">Our evevtayler Ready to <br> nStich your Clothes</div>
-                        <div class="introduction-block_text">evevtayler berpengalaman belasan tahun dalam pembuatan dan permak pakaian pria maupun wanita dengan standar jahitan halus dan bergaransi.unc dictum.</div>
+                        <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Dekorasi judul" loading="lazy"></div>
+                        <div class="sub-title">Tentang evevtayler Bespoke</div>
+                        <div class="sec-title">Satu Pola Khusus untuk <br> Setiap Momen Istimewa Anda</div>
+                        <div class="introduction-block_text">Busana momen sekali seumur hidup—pernikahan, wisuda, lamaran, hingga acara kenegaraan—tidak seharusnya memakai ukuran massal yang kaku. Master tailor <strong>evevtayler</strong> merancang pola baru mengikuti proporsi bahu, pinggang, dan postur tubuh Anda sehingga hasil akhirnya elegan, proporsional, dan penuh percaya diri.</div>
                         <ul class="introduction-block_list">
-                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt=""></i>Suspe ndisse suscipit sagittis leo.</li>
-                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt=""></i>Garansi pas di badan &amp; gratis vermak ulang bila kurang pas.</li>
+                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt="Centang" loading="lazy"></i>Konsultasi gratis pemilihan model, kerah jas, potongan kebaya, dan estimasi meteran kain.</li>
+                            <li><i class="icon"><img src="assets/images/shape/shape-2.png" alt="Centang" loading="lazy"></i>Garansi pas di badan termasuk revisi fitting gratis sebelum hari-H acara Anda.</li>
                         </ul>
-                        <div class="row">
+                        <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="introduction-block_contact-info">
-                                    <div class="introduction-block_phone-title">Call Anytime</div>
-                                    <div class="introduction-block-phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                                    <div class="introduction-block_phone-title">Reservasi Fitting via WA</div>
+                                    <div class="introduction-block-phone"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="introduction-block_link-btn"><a href="#tentang" class="theme-btn btn-style-one">discover more</a></div>
+                                <div class="introduction-block_link-btn"><a href="#daftar-harga" class="theme-btn btn-style-one">Cek Daftar Tarif</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
     </section>
 
-    <!-- Layanan Jahit Offer -->
+    <!-- 4 Layanan Bespoke Utama -->
     <section id="layanan" class="service-offer-section">
         <div class="auto-container">
-            <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Checkout our services</div>
-                <div class="sec-title">Layanan Jahit We Offer</div>
+            <div class="text-center mb-5">
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Layanan Jahit Bespoke" loading="lazy"></div>
+                <div class="sub-title">Layanan Jahit Kustom Unggulan</div>
+                <div class="sec-title">Jas Pengantin, Kebaya &amp; Gaun Pesta</div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_jahit_jas_pria.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Jas Pengantin Pria 3-Piece (Rp 650.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_jahit_jas_pria.webp" alt="Jahit Jas Pengantin Pria 3-Piece Bespoke" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Jas Pengantin Pria 3-Piece Bespoke</h4>
+                        <div class="service-block-three_text">Setelan lengkap jas, rompi (vest), dan celana formal berpola personal. Konstruksi lapel tajam, bantalan bahu natural, dan furing adem untuk kenyamanan sepanjang resepsi.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 650.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Jas%20Pengantin%20Pria%203-Piece%20Bespoke%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20650.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%205%20-%207%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Jas Pengantin Pria 3-Piece Bespoke" data-wa-harga="Rp 650.000" data-wa-estimasi="5 - 7 Hari"><i class="fab fa-whatsapp"></i> Booking Fitting WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_kebaya_gaun_pesta.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Kebaya Wisuda Modern Brokat (Rp 350.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_kebaya_gaun_pesta.webp" alt="Jahit Kebaya Wisuda Modern Brokat dan Payet" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Kebaya Wisuda Modern &amp; Brokat</h4>
+                        <div class="service-block-three_text">Potongan kutubaru, kartini, hingga kebaya modern berfuring lembut yang tidak gatal di kulit. Tersedia pemasangan bustier dalam serta aplikasi payet mutiara rapi.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 350.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Kebaya%20Wisuda%20Modern%20%26%20Brokat%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20350.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%204%20-%206%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Kebaya Wisuda Modern & Brokat" data-wa-harga="Rp 350.000" data-wa-estimasi="4 - 6 Hari"><i class="fab fa-whatsapp"></i> Booking Fitting WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_baju_muslim_gamis.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Gaun Malam Silk &amp; Velvet (Rp 450.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/service_baju_muslim_gamis.webp" alt="Jahit Gaun Malam Silk Satin dan Velvet" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Gaun Malam Silk, Satin &amp; Velvet</h4>
+                        <div class="service-block-three_text">Gaun pesta, dress bridesmaid, dan gamis kondangan dengan jatuhan kain anggun, resleting tersembunyi, dan jahitan stik balik halus bebas kerut.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 450.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Gaun%20Malam%20Silk%2C%20Satin%20%26%20Velvet%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20450.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%205%20-%207%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Gaun Malam Silk, Satin & Velvet" data-wa-harga="Rp 450.000" data-wa-estimasi="5 - 7 Hari"><i class="fab fa-whatsapp"></i> Booking Fitting WA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-4">
                     <div class="service-block-three">
                         <div class="service-block-three_border_top"></div>
                         <div class="service-block-three_border_left"></div>
                         <div class="service-block-three_border_right"></div>
                         <div class="service-block-three_border_bottom"></div>
-                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt=""></div>
-                        <h4 class="service-block-three_title">Batik Tulis Sutra Lapis Furing (Rp 200.000)</h4>
-                        <div class="service-block-three_text">Donec suscipit ipsum quis est mentum, quis sollicitudin libero tempus.</div>
+                        <div class="service-block-three_image img_hover_2"><img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt="Jahit Kemeja Batik Tulis Sutra Lapis Furing Sanggit" loading="lazy"></div>
+                        <h4 class="service-block-three_title">Batik Tulis Sutra Lapis Furing</h4>
+                        <div class="service-block-three_text">Pengerjaan teknik sanggit agar motif batik menyambung simetris pada lipatan kancing dan saku dada, dilapisi furing katun ero dingin yang rapi.</div>
+                        <div class="evev-service-meta">
+                            <span class="evev-service-price">Rp 200.000</span>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Batik%20Tulis%20Sutra%20Lapis%20Furing%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20200.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%203%20-%204%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-service-wa" data-wa-layanan="Batik Tulis Sutra Lapis Furing" data-wa-harga="Rp 200.000" data-wa-estimasi="3 - 4 Hari"><i class="fab fa-whatsapp"></i> Booking Fitting WA</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video -->
-    <section class="video-section">
-        <div class="video-section_bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/evevtayler/hero_fitting_jas_kebaya.webp)"></div>
+    <!-- Daftar Tarif Bespoke 6 Paket Simetris -->
+    <section id="daftar-harga" class="evev-tarif-section">
         <div class="auto-container">
-            <div class="row">
-                <div class="video-btn"><a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="overlay-link play-now ripple" data-fancybox="gallery" data-caption=""><i class="fas fa-play"></i></a></div>
-                <h4 class="video-block_title">You Can Depend on Our <br> evevtayler to Get a Quality Dresses</h4>
+            <div class="text-center mb-5">
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Daftar Tarif Jahit Bespoke" loading="lazy"></div>
+                <div class="sub-title">Daftar Ongkos Jahit &amp; Paket Bespoke</div>
+                <div class="sec-title">Transparan, Terukur &amp; Bergaransi Fitting</div>
+            </div>
+            <div class="row" id="daftar-tarif-bespoke">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--bespoke">Best Seller</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 5 – 7 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Jas Pengantin Pria 3-Piece (Jas, Vest & Celana)</h4>
+                        <p class="evev-tarif-card__desc">Pola full bespoke dengan konstruksi canvas bahu tegap, furing adem menyerap keringat, plus 2x sesi fitting hingga sempurna.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Ongkos Jahit Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 650.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Jas%20Pengantin%20Pria%203-Piece%20%28Jas%2C%20Vest%20%26%20Celana%29%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20650.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%205%20%E2%80%93%207%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Jas Pengantin Pria 3-Piece (Jas, Vest & Celana)" data-wa-harga="Rp 650.000" data-wa-estimasi="5 – 7 Hari">
+                                <i class="fab fa-whatsapp"></i> Booking Fitting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--bespoke">Favorit Wisuda</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 4 – 6 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Kebaya Wisuda Modern & Brokat Payet</h4>
+                        <p class="evev-tarif-card__desc">Jahitan halus mengikuti lekuk tubuh tanpa gerah, bustier/kamisol rapi, serta opsi payet tangan untuk wisuda, lamaran & akad.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Ongkos Jahit Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 350.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Kebaya%20Wisuda%20Modern%20%26%20Brokat%20Payet%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20350.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%204%20%E2%80%93%206%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Kebaya Wisuda Modern & Brokat Payet" data-wa-harga="Rp 350.000" data-wa-estimasi="4 – 6 Hari">
+                                <i class="fab fa-whatsapp"></i> Booking Fitting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--bespoke">Eksklusif Pesta</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 5 – 7 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Gaun Malam Silk, Satin & Velvet</h4>
+                        <p class="evev-tarif-card__desc">Potongan drapery elegan dengan risleting jepang tersembunyi dan keliman halus standar butik untuk bridesmaid maupun pesta formal.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Ongkos Jahit Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 450.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Gaun%20Malam%20Silk%2C%20Satin%20%26%20Velvet%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20450.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%205%20%E2%80%93%207%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Gaun Malam Silk, Satin & Velvet" data-wa-harga="Rp 450.000" data-wa-estimasi="5 – 7 Hari">
+                                <i class="fab fa-whatsapp"></i> Booking Fitting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--bespoke">Eksekutif</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 3 – 5 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Blazer Kerja Pria & Wanita Tailored</h4>
+                        <p class="evev-tarif-card__desc">Siluet tegas dan rapi untuk presentasi kantor, sidang, maupun acara resmi dengan pilihan kancing eksklusif & saku dalam fungsional.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Ongkos Jahit Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 380.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Blazer%20Kerja%20Pria%20%26%20Wanita%20Tailored%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20380.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%203%20%E2%80%93%205%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Blazer Kerja Pria & Wanita Tailored" data-wa-harga="Rp 380.000" data-wa-estimasi="3 – 5 Hari">
+                                <i class="fab fa-whatsapp"></i> Booking Fitting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--bespoke">Motif Simetris</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 3 – 4 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Kemeja Batik Tulis Sutra Lapis Furing</h4>
+                        <p class="evev-tarif-card__desc">Teknik pemotongan sanggit (motif menyambung sempurna di kancing & saku) dengan furing katun ero dingin dan jahitan lipat dalam.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Ongkos Jahit Mulai</span>
+                                <div class="evev-tarif-card__price">Rp 200.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Kemeja%20Batik%20Tulis%20Sutra%20Lapis%20Furing%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Rp%20200.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%203%20%E2%80%93%204%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Kemeja Batik Tulis Sutra Lapis Furing" data-wa-harga="Rp 200.000" data-wa-estimasi="3 – 4 Hari">
+                                <i class="fab fa-whatsapp"></i> Booking Fitting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="evev-tarif-card">
+                        <div class="evev-tarif-card__head">
+                            <span class="evev-tarif-card__badge evev-tarif-card__badge--bespoke">Hemat Keluarga</span>
+                            <span class="evev-tarif-card__time"><i class="far fa-clock"></i> 7 – 10 Hari</span>
+                        </div>
+                        <h4 class="evev-tarif-card__title">Paket Bespoke Seragam Keluarga Pernikahan</h4>
+                        <p class="evev-tarif-card__desc">Paket jahit seragam kebaya & beskap/jas keluarga inti (minimal 5 set) dengan harga khusus, jadwal fitting bersama, dan prioritas antrean.</p>
+                        <div class="evev-tarif-card__foot">
+                            <div>
+                                <span class="evev-tarif-card__label">Ongkos Jahit Mulai</span>
+                                <div class="evev-tarif-card__price">Mulai Rp 1.450.000</div>
+                            </div>
+                            <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20%26%20jadwal%20fitting%20jahit%20kustom%3A%0A%0A%E2%80%A2%20Layanan%20%3A%20Paket%20Bespoke%20Seragam%20Keluarga%20Pernikahan%0A%E2%80%A2%20Estimasi%20Tarif%20%3A%20Mulai%20Rp%201.450.000%0A%E2%80%A2%20Estimasi%20Pengerjaan%20%3A%207%20%E2%80%93%2010%20Hari%0A%E2%80%A2%20Jumlah%20Busana%20%3A%201%20set%0A%E2%80%A2%20Tanggal%20Acara%20/%20Target%20Selesai%20%3A%20%0A%0AMohon%20info%20jadwal%20private%20fitting%20di%20workshop%20ya.%20Terima%20kasih%21" target="_blank" rel="noopener noreferrer" class="evev-tarif-card__btn" data-wa-layanan="Paket Bespoke Seragam Keluarga Pernikahan" data-wa-harga="Mulai Rp 1.450.000" data-wa-estimasi="7 – 10 Hari">
+                                <i class="fab fa-whatsapp"></i> Booking Fitting
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Portofolio Karya -->
+    <!-- Highlight CTA Section -->
+    <section class="video-section">
+        <div class="video-section_bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/evevtayler/hero_fitting_jas_kebaya.webp);"></div>
+        <div class="auto-container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h4 class="video-block_title">Punya Referensi Model dari Pinterest atau Instagram? <br> Kirim Fotonya, Kami Wujudkan Sesuai Ukuran Anda!</h4>
+                    <div class="mt-4">
+                        <a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" class="theme-btn btn-style-one" data-wa-umum="Halo evevtayler Bespoke, saya punya referensi model jas/kebaya dan ingin konsultasi ongkos jahit."><span>Kirim Referensi Model via WA</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portofolio Karya Bespoke -->
     <section id="galeri" class="gallery-section">
-        <div class="auto-continer">
+        <div class="auto-container">
             <div class="row row-3">
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-17.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/service_jahit_jas_pria.webp" alt="Portofolio Jas Pengantin Pria 3-Piece Bespoke" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-17.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/service_jahit_jas_pria.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Portofolio Jas Pria"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -401,11 +598,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-18.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/service_kebaya_gaun_pesta.webp" alt="Portofolio Kebaya Wisuda Brokat Modern" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-18.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/service_kebaya_gaun_pesta.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Portofolio Kebaya"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -413,11 +610,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-19.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt="Portofolio Kain Wol dan Batik Eksklusif" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-19.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/portfolio_koleksi_kain.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Koleksi Kain"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -425,11 +622,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="gallery-block gallery-overlay">
-                        <div class="gallery-block_image"><img src="assets/images/resource/image-20.jpg" alt=""></div>
+                        <div class="gallery-block_image"><img src="assets/images/evevtayler/portfolio_detail_jahitan.webp" alt="Detail Jahitan Bespoke dan Kancing Jas" loading="lazy"></div>
                         <div class="overlay-box">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="assets/images/resource/image-20.jpg" class="lightbox-image link" data-fancybox="gallery"><span class="icon fal fa-plus"></span></a>
+                                    <a href="assets/images/evevtayler/portfolio_detail_jahitan.webp" class="lightbox-image link" data-fancybox="gallery" aria-label="Perbesar Detail Jahitan"><span class="icon fal fa-plus"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -439,115 +636,112 @@
         </div>
     </section>
 
-    <!-- Our testimonials -->
-    <section class="our-testimonials-section-two">
+    <!-- Testimoni Klien Bespoke -->
+    <section id="testimoni" class="our-testimonials-section-two">
         <div class="auto-container">
             <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Our testimonials </div>
-                <div class="sec-title">What They’re Saying</div>
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Ulasan Klien Bespoke evevtayler" loading="lazy"></div>
+                <div class="sub-title">Ulasan Klien Pengantin &amp; Wisuda</div>
+                <div class="sec-title">Cerita Puas di Hari Bahagia</div>
             </div>
             <div class="theme_carousel owl-theme owl-carousel owl-style-one" data-options='{"loop": true, "center": false, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "480" :{ "items" : "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "3" }}}'>
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-6.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
-                    <div class="testimonial-block-two_name">Budi Santoso</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-6.png" alt="Testimoni Dimas Pratama" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Jahit jas pengantin 3-piece untuk resepsi di sini hasilnya luar biasa! Bahunya tegap, pinggang slim tanpa sempit, dan selesai tepat 6 hari sesuai janji."</div>
+                    <div class="testimonial-block-two_name">Dimas Pratama</div>
+                    <div class="testimonial-block-two_dasignation">Pengantin Pria — Jakarta Selatan</div>
                 </div>
 
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-7.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
-                    <div class="testimonial-block-two_name">Annisa Rahma</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-7.png" alt="Testimoni Nadya Kartika" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Kebaya wisuda brokat dan payet saya dijahit sangat halus. Furingnya dingin banget dipakai dari pagi sampai sore dan pas di badan sejak fitting pertama!"</div>
+                    <div class="testimonial-block-two_name">Nadya Kartika</div>
+                    <div class="testimonial-block-two_dasignation">Wisudawati — Jakarta Timur</div>
                 </div>
 
                 <div class="testimonial-block-two">
-                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-8.png" alt=""></div>
-                    <div class="testimonial-block-two_text">Hasil permak celana dan jas rapi sekali, pas di badan dan pengerjaannya sangat cepat. Sangat recommended!</div>
-                    <div class="testimonial-block-two_name">Hendro Wijaya</div>
-                   <div class="testimonial-block-two_dasignation">Customer</div>
+                    <div class="testimonial-block-two_image"><img src="assets/images/resource/image-8.png" alt="Testimoni Irfan Hakim" loading="lazy"></div>
+                    <div class="testimonial-block-two_text">"Sudah 4 kali jahit batik tulis sutra lapis furing di evevtayler. Motif batiknya selalu nyambung simetris (sanggit) dan jahitannya sekelas butik besar di mal."</div>
+                    <div class="testimonial-block-two_name">Irfan Suryadi</div>
+                    <div class="testimonial-block-two_dasignation">Eksekutif Perbankan — Kuningan</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Fun facts -->
+    <!-- Pencapaian & Keahlian Bespoke -->
     <section class="fun-facts-section-two">
         <div class="fun-facts-section-two-bg" data-parallax='{"y": 30}' style="background-image: url(assets/images/background/bg-4.jpg);"></div>
         <div class="auto-container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                    <div class="sub-title">Fun facts</div>
-                    <div class="sec-title mb-30">Our Numbers Speaks <br> About Everything</div>
-                    <div class="fun-facts-section-two_description">There are many variations of passages of available but the not the majority have suffered alteration in form,simply free text by injected is randomised words which. </div>
+                    <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Standar Kualitas Tailor Bespoke" loading="lazy"></div>
+                    <div class="sub-title">Standar Pengerjaan Butik</div>
+                    <div class="sec-title mb-30">Presisi Pola &amp; Detail <br> yang Membedakan Kami</div>
+                    <div class="fun-facts-section-two_description">Dari pengukuran 18 titik tubuh hingga penyetrikaan uap akhir (final pressing), setiap busana bespoke melalui 4 tahap pengecekan mutu sebelum diserahkan kepada Anda.</div>
 
                     <div class="progress-levels mb-30">
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Material</h5>
+                            <h5>Presisi Pola &amp; Fitting Tubuh</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="88"><div class="percent"></div></div></div>
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="99"><div class="percent"></div></div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Stitching</h5>
+                            <h5>Kualitas Konstruksi Jas &amp; Kebaya</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="65"><div class="percent"></div></div></div>
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="97"><div class="percent"></div></div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Skill Box-->
                         <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <h5>Fabrics</h5>
+                            <h5>Ketepatan Jadwal Selesai Acara</h5>
                             <div class="inner">
                                 <div class="bar">
-                                    <div class="bar-innner"><div class="bar-fill" data-percent="75"><div class="percent"></div></div></div>
-                                </div>                                
+                                    <div class="bar-innner"><div class="bar-fill" data-percent="98"><div class="percent"></div></div></div>
+                                </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="col-lg-6 mb-30">
                     <div class="row no-gutters">
                         <div class="col-md-6">
-                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/resource/image-6.jpg);">
+                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/evevtayler/service_jahit_jas_pria.webp);">
                                 <div class="content-middle">
                                     <div class="funfacts-block_icon"><i class="flaticon-suit"></i></div>
-                                    <h4 class="funfacts-block_title">Suits Stich</h4>
+                                    <h4 class="funfacts-block_title">Full Bespoke Jas</h4>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="funfacts-block mb-0 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="content-middle">
                                     <div class="count-outer count-box funfacts-block_number">
-                                        <span class="count-text" data-speed="3000" data-stop="8800">0</span>
+                                        <span class="count-text" data-speed="3000" data-stop="2400">0</span><span class="plus">+</span>
                                     </div>
-                                    <h4 class="funfacts-block_title">Dresses Stitched</h4>
+                                    <h4 class="funfacts-block_title">Jas &amp; Kebaya Selesai</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 order-md-4">
-                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/resource/image-7.jpg);">
+                            <div class="funfacts-block mb-0 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms" style="background-image: url(assets/images/evevtayler/service_kebaya_gaun_pesta.webp);">
                                 <div class="content-middle">
                                     <div class="funfacts-block_icon"><i class="flaticon-measuring"></i></div>
-                                    <h4 class="funfacts-block_title">Body Measure</h4>
+                                    <h4 class="funfacts-block_title">18 Titik Ukur Tubuh</h4>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="funfacts-block mb-0 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="content-middle">
                                     <div class="count-outer count-box funfacts-block_number">
-                                        <span class="count-text" data-speed="3000" data-stop="24">0</span><span class="plus">+</span>
+                                        <span class="count-text" data-speed="3000" data-stop="12">0</span><span class="plus">+</span>
                                     </div>
-                                    <h4 class="funfacts-block_title">Expert evevtayler</h4>
+                                    <h4 class="funfacts-block_title">Tahun Master Tailor</h4>
                                 </div>
                             </div>
                         </div>
@@ -557,81 +751,81 @@
         </div>
     </section>
 
-    <!-- Our Benefits -->
+    <!-- Keunggulan Bespoke -->
     <section class="benefits-section">
         <div class="auto-container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                    <div class="sub-title light">Our Benefits</div>
-                    <div class="sec-title light mb-30">Why You Should <br> Choose us?</div>
-                    <div class="benefits-section_description">There are many variations of passages of Lorem <br> Ipsum available, but the majority have suffered <br> alteration in some form. </div>
+                    <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Keunggulan Jahit Bespoke evevtayler" loading="lazy"></div>
+                    <div class="sub-title light">Keunggulan Bespoke</div>
+                    <div class="sec-title light mb-30">Kenapa Memilih Jahit <br> Kustom di evevtayler?</div>
+                    <div class="benefits-section_description">Dapatkan pengalaman layaknya butik tailor eksklusif dengan ongkos jahit yang masuk akal, jadwal pasti, dan garansi revisi fitting tanpa biaya tambahan.</div>
                     <ul class="benefits-section_list">
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Urgent wedding dresses solutions.</li>
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Top quality services with reasonable price</li>
-                        <li><img src="assets/images/shape/shape-2.png" alt="">Reliable & experienced evevtaylers</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 1" loading="lazy">Layanan prioritas (express bespoke) untuk jadwal pernikahan &amp; wisuda mepet.</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 2" loading="lazy">Termasuk sesi konsultasi desain, furing adem &amp; garansi fitting sampai pas.</li>
+                        <li><img src="assets/images/shape/shape-2.png" alt="Poin 3" loading="lazy">Menerima pesanan seragam keluarga pernikahan &amp; bridesmaid hingga 30 set.</li>
                     </ul>
                 </div>
-               <div class="col-lg-6">
-                   <div class="benefits-section_image">
-                       <img src="assets/images/resource/image-24.jpg" alt="">
-                       <div class="benefits-section_icon-box">
-                           <div class="benefits-section_icon"><i class="flaticon-knitting"></i></div>
-                           <div class="benefits-section_text">Style <br> According <br> To Your Way</div>
-                       </div>
+                <div class="col-lg-6">
+                    <div class="benefits-section_image">
+                        <img src="assets/images/evevtayler/hero_fitting_jas_kebaya.webp" alt="Sesi Fitting Jas dan Kebaya Bespoke di evevtayler" loading="lazy">
+                        <div class="benefits-section_icon-box">
+                            <div class="benefits-section_icon"><i class="flaticon-knitting"></i></div>
+                            <div class="benefits-section_text">Pola Khusus <br> Nyaman &amp; <br> Elegan Dipakai</div>
+                        </div>
                     </div>
-               </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- Panduan Gaya & Perawatan Busana -->
     <section id="blog" class="news-section-two">
         <div class="auto-container">
             <div class="text-center">
-                <div class="sec-title-dec"><img src="assets//images/shape/shape-1.png" alt=""></div>
-                <div class="sub-title">Latest Blog Posts</div>
-                <h2 class="sec-title">News & Articles</h2>
+                <div class="sec-title-dec"><img src="assets/images/shape/shape-1.png" alt="Panduan Gaya Jas dan Kebaya" loading="lazy"></div>
+                <div class="sub-title">Panduan Gaya &amp; Perawatan</div>
+                <h2 class="sec-title">Tips Memilih Kain &amp; Merawat Busana</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-1.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/service_jahit_jas_pria.webp" alt="Panduan Memilih Kain Wol untuk Jas Pengantin di Iklim Tropis" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">11 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Master Tailor</span> <i class="fal fa-tag"></i> <span>Jas Pria</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, boleh konsultasi pilihan kain jas yang adem untuk resepsi?">Tips Memilih Bahan Jas Pengantin yang Tegap Namun Tetap Adem di Iklim Tropis</a></h4>
+                                <div class="news-block-one_text">Kenali perbedaan semi-wool, wool blend, dan furing bernapas agar jas tetap nyaman selama acara resepsi.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, boleh konsultasi pilihan kain jas yang adem untuk resepsi?">Konsultasi Kain WA</a></div>
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-2.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/service_kebaya_gaun_pesta.webp" alt="Berapa Meter Kain Brokat untuk Kebaya Wisuda Modern" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">17 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Master Tailor</span> <i class="fal fa-tag"></i> <span>Kebaya</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya mau tanya kebutuhan meteran kain untuk kebaya wisuda.">Panduan Estimasi Meteran Kain Brokat &amp; Satin untuk Kebaya Wisuda Modern</a></h4>
+                                <div class="news-block-one_text">Hindari kekurangan kain saat hendak menjahit kebaya—simak takaran ideal untuk ukuran S hingga XXL.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, saya mau tanya kebutuhan meteran kain untuk kebaya wisuda.">Hitung Meteran WA</a></div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="col-lg-4 col-md-6 news-block-one">
                     <div class="news-block-one_inner-box">
-                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/resource/news-3.jpg" alt=""></div>
+                        <div class="news-block-one_image image-100 img_hover_3"><img src="assets/images/evevtayler/portfolio_koleksi_kain.webp" alt="Cara Merawat Jas Wol dan Kebaya Payet Agar Awet" loading="lazy"></div>
                         <div class="news-block-one_lower-content">
-                            <div class="news-block-one_date">20 Setember, 2021</div>
+                            <div class="news-block-one_date">23 November 2026</div>
                             <div class="news-block-one_box">
-                                <div class="news-block-one_post-meta"> <i class="fal fa-user-circle"></i> <span>Admin</span> <i class="fal fa-comments"></i><span>2 Comments</span> </div>
-                                <h4 class="news-block-one_title"><a href="#blog">How to Take Care of <br> Leather Jackets</a></h4>
-                                <div class="news-block-one_text">Tips merawat pakaian jas wol dan kebaya agar awet bertahun-tahun.</div>
-                                <div class="button-link"><a href="#blog" class="news-block-one_read_more_link">Read More</a></div>                                        
+                                <div class="news-block-one_post-meta"><i class="fal fa-user-circle"></i> <span>Master Tailor</span> <i class="fal fa-tag"></i> <span>Perawatan</span></div>
+                                <h4 class="news-block-one_title"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-wa-umum="Halo evevtayler, saya ingin konsultasi jahit batik tulis atau perawatan jas.">Cara Menyimpan &amp; Merawat Jas Wol serta Kebaya Payet Agar Awet Bertahun-Tahun</a></h4>
+                                <div class="news-block-one_text">Gunakan hanger bahu lebar dan sarung kain breathable untuk menjaga bentuk bahu jas dan kilau payet kebaya.</div>
+                                <div class="button-link"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" class="news-block-one_read_more_link" data-wa-umum="Halo evevtayler, saya ingin konsultasi jahit batik tulis atau perawatan jas.">Tanya Tailor WA</a></div>
                             </div>
                         </div>
                     </div>
@@ -640,89 +834,62 @@
         </div>
     </section>
 
-    <!-- Client Logo -->
-    <section class="client-logo style-two">
+    <!-- Footer -->
+    <footer id="kontak" class="main-footer">
         <div class="auto-container">
-            <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "center": false, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "480" :{ "items" : "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "3" } , "992":{ "items" : "4" }, "1200":{ "items" : "5" }}}'>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-                <div class="column">
-                    <div class="image"><img src="assets/images/client-logo/client-logo-2.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer id="kontak" class="main-footer" style="background-image: url(assets/images/background/bg-6.jpg);">
-        <div class="auto-container">
-            <!--Widgets Section-->
             <div class="widgets-section">
                 <div class="row">
-                    
-                    <!--Column-->
                     <div class="column col-lg-5 col-md-12">
                         <div class="widget about-widget">
-                            <div class="about-widget_text">
-                                Pusat jasa jahit busana, vermak kilat pakaian harian &amp; konveksi seragam terpercaya di Jakarta Timur.
+                            <div class="about-widget_text" data-config="tagline">
+                                Vermak Kilat 15–30 Menit, Jahit Jas &amp; Kebaya Bespoke, hingga Konveksi Seragam Bergaransi.
                             </div>
-                            <div class="about-widget_phone"><a href="tel:0895323418658">0895-3234-18658</a></div>
+                            <div class="about-widget_phone"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                             <ul class="about-widget_social-links">
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-wa-umum=""><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!--Column-->
                     <div class="column col-lg-7 col-md-12">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-5">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Layanan Jahit</h4>
+                                    <h4 class="widget-title">Layanan Jahit Bespoke</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#layanan">Outerwear</a></li>
-                                            <li><a href="#layanan">Jas Pengantin Pria 3-Piece (Rp 650.000)</a></li>
-                                            <li><a href="#layanan">Gaun Malam Silk &amp; Velvet (Rp 450.000)</a></li>
-                                            <li><a href="#layanan">Batik Tulis Sutra Lapis Furing (Rp 200.000)</a></li>
-                                        </ul>                                        
+                                            <li><a href="#daftar-harga">Jas Pengantin 3-Piece (Rp 650.000)</a></li>
+                                            <li><a href="#daftar-harga">Kebaya Wisuda Brokat (Rp 350.000)</a></li>
+                                            <li><a href="#daftar-harga">Gaun Malam Silk &amp; Velvet (Rp 450.000)</a></li>
+                                            <li><a href="#daftar-harga">Batik Tulis Lapis Furing (Rp 200.000)</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Links</h4>
+                                    <h4 class="widget-title">Navigasi Cepat</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#tentang">About</a></li>
-                                            <li><a href="#tentang">Meet the Team</a></li>
-                                            <li><a href="#galeri">Our Portofolio Karya</a></li>
-                                            <li><a href="#kontak">Contact</a></li>
-                                        </ul>                    
+                                            <li><a href="#tentang">Tentang Butik</a></li>
+                                            <li><a href="#daftar-harga">Daftar Tarif Bespoke</a></li>
+                                            <li><a href="#galeri">Portofolio Karya</a></li>
+                                            <li><a href="#testimoni">Testimoni Klien</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="widget links-widget">
-                                    <h4 class="widget-title">Legal</h4>
+                                    <h4 class="widget-title">Varian Layanan</h4>
                                     <div class="widget-content">
                                         <ul>
-                                            <li><a href="#tentang">Help</a></li>
-                                            <li><a href="#tentang">Terms of Use</a></li>
-                                            <li><a href="#tentang">Privacy Policy</a></li>
-                                        </ul>                                        
+                                            <li><a href="template-1.html">Vermak Kilat</a></li>
+                                            <li><a href="template-2.html">Jas &amp; Kebaya</a></li>
+                                            <li><a href="template-3.html">Konveksi Seragam</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -730,32 +897,46 @@
                         <div class="footer-border-bottom mb-40"></div>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="contact-widget_address-title">Alamat Workshop Kami</div>
-                                <div class="contact-widget_address mb-40"> Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur</div>
+                                <div class="contact-widget_address-title">Alamat Workshop &amp; Jam Buka</div>
+                                <div class="contact-widget_address mb-2" data-config="alamat">Jl. Otista Raya No. 88, Bidara Cina, Jatinegara, Jakarta Timur 13330</div>
+                                <div class="contact-widget_address mb-40" data-config="jamOperasional">Buka Setiap Hari: 08.00 – 21.00 WIB</div>
                             </div>
                             <div class="col-md-6">
-                                <div class="contact-widget_mail-title">Email &amp; Konsultasi</div>
-                                <div class="contact-widget_mail mb-40"><a href="mailto:evevdigital@gmail.com">evevdigital@gmail.com</a></div>
+                                <div class="contact-widget_mail-title">Email &amp; Booking Fitting</div>
+                                <div class="contact-widget_mail mb-2"><a href="mailto:kontak@evevdigital.com" data-config="email">kontak@evevdigital.com</a></div>
+                                <div class="contact-widget_mail mb-40"><a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." target="_blank" rel="noopener noreferrer" data-config="whatsappDisplay" data-wa-umum="">+62 895-3234-18658</a></div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="auto-container">
-                <div class="copyright">&copy; 2026 evevtayler (EvEvDigital). Seluruh Hak Cipta Dilindungi.</div>
+                <div class="copyright">&copy; 2026 <strong>evevtayler</strong>. Seluruh Hak Cipta Dilindungi. Ditenagai oleh <strong>EvEvDigital</strong>.</div>
             </div>
         </div>
     </footer>
-	
-</div>
-<!--End pagewrapper-->
 
-<!--Scroll to top-->
-<div class="scroll-to-top"><a href="#" class="back-to-top " data-wow-duration="1.0s " data-wow-delay="1.0s "><i class="fa fa-angle-up "></i></a></div>
+</div>
+<!-- End pagewrapper -->
+
+<!-- Scroll to top -->
+<div class="scroll-to-top"><a href="#" class="back-to-top" aria-label="Kembali ke atas"><i class="fa fa-angle-up"></i></a></div>
+
+<!-- Floating Template Switcher Bar -->
+<div id="evev-template-switcher" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 99998; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif;">
+    <span style="color: #FCD34D; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 0 6px;">PILIH TEMPLATE:</span>
+    <a href="template-1.html" class="switcher-pill" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #F1F5F9;">1. Vermak Kilat</a>
+    <a href="template-2.html" class="switcher-pill active" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: #3730A3; color: #FFFFFF;">2. Jas &amp; Kebaya Bespoke</a>
+    <a href="template-3.html" class="switcher-pill" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #F1F5F9;">3. Konveksi Seragam</a>
+</div>
+
+<!-- Floating WhatsApp Button (WCAG AAA Contrast > 7:1) -->
+<a href="https://wa.me/62895323418658?text=Halo%20evevtayler%20Bespoke%2C%20saya%20ingin%20konsultasi%20jahit%20jas%20pria%2C%20kebaya%20wisuda%2C%20atau%20gaun%20pesta%20serta%20jadwal%20fitting." class="floating-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Booking Fitting Jas dan Kebaya via WhatsApp evevtayler" data-wa-umum="Halo evevtayler Bespoke, saya ingin konsultasi jahit jas, kebaya, atau gaun pesta.">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span>Booking Fitting WA</span>
+</a>
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/popper.min.js"></script>
@@ -771,29 +952,8 @@
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/jquery.ajaxchimp.min.js"></script>
 <script src="assets/js/parallax-scroll.js"></script>
-
 <script src="assets/js/script.js"></script>
-
-
-
-    <script src="assets/js/profil-usaha.js"></script>
-    <script src="assets/js/theme-toggle.js"></script>
-
-
-<!-- Floating Template Switcher Bar -->
-<div id="evev-template-switcher" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 99999; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif;">
-    <span style="color: #F59E0B; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 0 6px;">PILIH TEMPLATE:</span>
-    <a href="template-1.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">1. Vermak Kilat</a>
-    <a href="template-2.html" class="switcher-pill active" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: #4F46E5; color: #FFFFFF;">2. Jas &amp; Kebaya Bespoke</a>
-    <a href="template-3.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">3. Konveksi Seragam</a>
-</div>
-
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/62895323418658?text=Halo%20evevtayler,%20saya%20ingin%20konsultasi%20jahit%20atau%20vermak%20baju" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; z-index: 99999; background: #25D366; color: white; border-radius: 50px; padding: 12px 22px; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45); font-family: 'Plus Jakarta Sans', sans-serif; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    <i class="fab fa-whatsapp" style="font-size: 22px;"></i>
-    <span>Konsultasi Jahit WA</span>
-</a>
-
+<script src="assets/js/profil-usaha.js"></script>
+<script src="assets/js/theme-toggle.js"></script>
 </body>
 </html>
